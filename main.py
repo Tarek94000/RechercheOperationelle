@@ -1,5 +1,6 @@
-from graph import FlowNetwork
-from algorithms import ford_fulkerson, push_relabel, min_cost_flow
+from graph import Graphique
+from algorithms import *
+from utils import *
 
 def main():
     print("Bienvenue dans le programme de résolution de flots !")
@@ -22,7 +23,7 @@ def main():
     
     # Load the graph
     try:
-        graph = FlowNetwork.read_graph(fichier)
+        graph = Graphique.read_graph(fichier)
         graph.display()
     except FileNotFoundError:
         print("Le fichier spécifié est introuvable. Assurez-vous que le fichier existe.")

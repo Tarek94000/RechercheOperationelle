@@ -1,4 +1,4 @@
-class FlowNetwork:
+class Graphique:
     def __init__(self, n):
         self.n = n
         self.capacity = [[0] * n for _ in range(n)]
