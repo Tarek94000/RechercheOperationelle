@@ -1,59 +1,78 @@
-from process import *
+from graph import FlowNetwork
+from algorithms import ford_fulkerson, push_relabel, min_cost_flow
 
-def read_graph(filename):
-    with open(filename, 'r') as file:
-        lines = file.readlines()
+def main():
+    print("Bienvenue dans le programme de résolution de flots !")
+    print("Veuillez choisir un numéro de fichier entre 1 et 10 pour sélectionner un problème.")
+    
+    # Prompt the user to choose a file
+    while True:
+        try:
+            choix_fichier = int(input("Entrez un numéro entre 1 et 10: "))
+            if 1 <= choix_fichier <= 10:
+                break
+            else:
+                print("Veuillez entrer un nombre entre 1 et 10.")
+        except ValueError:
+            print("Entrée invalide. Veuillez entrer un nombre entre 1 et 10.")
+    
+    # Construct the file path
+    fichier = f"fig/fig{choix_fichier}.txt"
+    print(f"Fichier sélectionné : {fichier}")
+    
+    # Load the graph
+    try:
+        graph = FlowNetwork.read_graph(fichier)
+        graph.display()
+    except FileNotFoundError:
+        print("Le fichier spécifié est introuvable. Assurez-vous que le fichier existe.")
+        return
 
-    n = int(lines[0])
+    source, sink = 0, graph.n - 1  # Default source and sink nodes
+    
+    # Prompt the user to choose an algorithm
+    print("\nChoisissez un algorithme pour résoudre le problème :")
+    print("1. Ford-Fulkerson")
+    print("2. Push-Relabel")
+    if graph.has_costs():
+        print("3. Flot à coût minimal (Bellman-Ford)")
+    
+    while True:
+        try:
+            choix_algo = int(input("Entrez le numéro de l'algorithme: "))
+                
+            if not graph.has_costs() and choix_algo in [1, 2]:
+                break
+            elif graph.has_costs() and choix_algo in [1, 2, 3]:
+                break
+            else:
+                print("Veuillez entrer un numéro valide.")
+        except ValueError:
+            print("Entrée invalide. Veuillez entrer un numéro valide (1-3).")
 
-    # Initialisation du graphe
-    graph = {}
-    prixType = False
-    for i in range(n):
-        graph[i] = {}
+    # Execute the chosen algorithm
+    if choix_algo == 1:
+        max_flow = ford_fulkerson(graph, source, sink)
+        print(f"\nFlot maximal avec l'algorithme Ford-Fulkerson : {max_flow}")
+        graph.display_flow()
+    elif choix_algo == 2:
+        max_flow = push_relabel(graph, source, sink)
+        print(f"\nFlot maximal avec l'algorithme Push-Relabel : {max_flow}")
+        graph.display_flow()
+    elif choix_algo == 3:
+        while True:
+            try:
+                target_flow = int(input("Entrez la valeur de flot cible : "))
+                if target_flow > 0:
+                    break
+                else:
+                    print("Veuillez entrer une valeur positive.")
+            except ValueError:
+                print("Entrée invalide. Veuillez entrer une valeur entière positive.")
+        
+        total_cost = min_cost_flow(graph, source, sink, target_flow)
+        print(f"\nCoût total du flot : {total_cost}")
+        graph.display_flow()
 
-    # Création du tableau de capacité
-    for i in range(1, 1+n): # Parcours la colonne
-        line = lines[i].split() # Lis la ligne et sépare les valeurs
-
-        for j, value in enumerate(line): # Parcours les valeurs
-            if value != "0": # Si la valeur est différente de 0 dans la matrice, on l'implémente dans le graphe
-                graph[i-1][j] = {"capacité": int(value)}
-
-    # Ajout du prix si existant
-    if len(lines) > n+1:
-        prixType = True
-        for i in range(n + 2, 1+2*n): # Parcours la colonne
-            line = lines[i-1].split() # Lis la ligne et sépare les valeurs
-
-            for j, value in enumerate(line): # Parcours les valeurs
-                if value != "0": # Si la valeur est différente de 0 dans la matrice, on l'implémente dans le graphe
-                    graph[i-n-2][j]["prix"] = int(value)
-
-    return graph, n, prixType
-
-graph, n, prixType = read_graph("figures/fig6.txt")
-
-print(graph)
-print(n)
-print(prixType)
-
-for task in graph:
-    print()
-    for task2 in graph[task]:
-            print(task, "en", task2, "avec capacité",graph[task][task2]["capacité"], end = " ")
-            if prixType:
-                print("et prix", graph[task][task2]["prix"])
-
-# Test de find_augmenting_path
-path, min_capacity = find_augmenting_path(graph, n)
-print("Chemin augmentant :", path)
-print("Capacité minimale :", min_capacity)
-
-
-# Test de ford_fulkerson
-"""max_flow, residual_graph = ford_fulkerson(graph, n)
-print("Flot maximal :", max_flow)
-print("Graphe résiduel :", residual_graph)"""
-
-# bellman_ford_min_cost(graph, n)
+if __name__ == "__main__":
+    main()
