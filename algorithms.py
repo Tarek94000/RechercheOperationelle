@@ -18,7 +18,9 @@ def bfs(residual, source, sink, parent):
     return False
 
 
-def ford_fulkerson(graph, source, sink):
+def ford_fulkerson(graph):
+    source = 0
+    sink = graph.n - 1
     parent = [-1] * graph.n
     max_flow = 0
 
@@ -44,7 +46,7 @@ def ford_fulkerson(graph, source, sink):
     return max_flow
 
 
-def push_relabel(graph, source, sink):
+def push_relabel(graph):
     """
     Push-Relabel algorithm for Maximum Flow problem.
     
@@ -57,9 +59,13 @@ def push_relabel(graph, source, sink):
         int: Maximum flow from source to sink.
     """
     n = graph.n
+    source = 0
+    sink = n - 1
+    
     height = [0] * n       # Height of vertices
     excess = [0] * n       # Excess flow at vertices
     seen = [0] * n         # Tracks neighbors seen for discharge
+    
     
     # Initialize preflow
     height[source] = n
@@ -148,7 +154,7 @@ def bellman_ford(residual, cost, source, n):
     return dist, pred
 
 
-def min_cost_flow(graph, source, sink, target_flow):
+def min_cost_flow(graph, target_flow):
     """
     Minimum Cost Flow algorithm using Bellman-Ford to find augmenting paths.
     
@@ -162,6 +168,8 @@ def min_cost_flow(graph, source, sink, target_flow):
         int: Total cost of the flow.
     """
     n = graph.n
+    source = 0
+    sink = n - 1
     total_cost = 0
     flow = 0
 

@@ -6,7 +6,7 @@ class Graphique:
         self.residual = [[0] * n for _ in range(n)]
         self.flow = [[0] * n for _ in range(n)]
 
-        # Vérifie si le graphe a des coûts
+    # Vérifie si le graphe a des coûts
     def has_costs(self):
         if self.cost is None:
             return False
@@ -45,20 +45,117 @@ class Graphique:
         return graph
 
     def display_flow(self):
-        print("Flow matrix:")
-        for row in self.flow:
-            print(row)
-    
+        
+        flow = self.flow
+        print("\n\n* Matrice des flots:\n")
+        # Affiche l'en-tête de la matrice
+        print("  ", end="")
+        for i in range(len(flow)):
+            if i < 10:
+                print(" ", end="")
+            if i == 0:
+                print(f"  s", end="")
+            elif i == len(flow)-1:
+                print(f"  t", end="")
+            else:
+                print(f"  {chr(i+96)}", end="")
+        print()
+        
+        # Parcourt chaque tâche pour créer les lignes de la matrice
+        for i in range(len(flow)):
+            # Si la tâche fait plus de 9, on ajuste l'espacement pour l'affichage
+            if i == 0:
+                print(f"s ", end="")
+            elif i == len(flow)-1:
+                print(f"t ", end="")
+            else:
+                print(f"{chr(i+96)} ", end="")
+            
+            # Vérifie si la tâche actuelle est un prédécesseur de task2
+            for j in range(len(flow)):
+                # Si la tâche fait plus de 9, on ajuste l'espacement pour l'affichage
+                if flow[i][j] != 0:
+                    if flow[i][j] < 10 and flow[i][j] > 0:
+                        print(f"   {flow[i][j]}", end="")
+                    else:
+                        print(f"  {flow[i][j]}", end="")
+                else:
+                    print("   *", end="")
+            print()
+
     def display(self):
-        """
-        Displays the graph's capacity and cost matrices.
-        """
-        print("Capacity matrix:")
-        for row in self.capacity:
-            print(row)
+        
+        capacity = self.capacity
+        print("\n* Matrice des capacités:\n")
+        # Affiche l'en-tête de la matrice
+        print("  ", end="")
+        for i in range(len(capacity)):
+            if i < 10:
+                print(" ", end="")
+            if i == 0:
+                print(f"  s", end="")
+            elif i == len(capacity)-1:
+                print(f"  t", end="")
+            else:
+                print(f"  {chr(i+96)}", end="")
+        print()
+        
+        # Parcourt chaque tâche pour créer les lignes de la matrice
+        for i in range(len(capacity)):
+            # Si la tâche fait plus de 9, on ajuste l'espacement pour l'affichage
+            if i == 0:
+                print(f"s ", end="")
+            elif i == len(capacity)-1:
+                print(f"t ", end="")
+            else:
+                print(chr(i+97), "", end="")
+            
+            # Vérifie si la tâche actuelle est un prédécesseur de task2
+            for j in range(len(capacity)):
+                # Si la tâche fait plus de 9, on ajuste l'espacement pour l'affichage
+                if capacity[i][j] != 0:
+                    if capacity[i][j] < 10:
+                        print(f"   {capacity[i][j]}", end="")
+                    else:
+                        print(f"  {capacity[i][j]}", end="")
+                else:
+                    print("   *", end="")
+            print()
+            
         if self.cost:
-            print("\nCost matrix:")
-            for row in self.cost:
-                print(row)
-        else:
-            print("\nNo cost matrix.")
+            cost = self.cost
+            print("\n\n* Matrice des prix:\n")
+            # Affiche l'en-tête de la matrice
+            print("  ", end="")
+            for i in range(len(cost)):
+                if i < 10:
+                    print(" ", end="")
+                if i == 0:
+                    print(f"  s", end="")
+                elif i == len(cost)-1:
+                    print(f"  t", end="")
+                else:
+                    print(f"  {chr(i+96)}", end="")
+            print()
+            
+            # Parcourt chaque tâche pour créer les lignes de la matrice
+            for i in range(len(cost)):
+                # Si la tâche fait plus de 9, on ajuste l'espacement pour l'affichage
+                if i == 0:
+                    print(f"s ", end="")
+                elif i == len(cost)-1:
+                    print(f"t ", end="")
+                else:
+                    print(f"{chr(i+96)} ", end="")
+                
+                # Vérifie si la tâche actuelle est un prédécesseur de task2
+                for j in range(len(cost)):
+                    # Si la tâche fait plus de 9, on ajuste l'espacement pour l'affichage
+                    if cost[i][j] != 0:
+                        if cost[i][j] < 10:
+                            print(f"   {cost[i][j]}", end="")
+                        else:
+                            print(f"  {cost[i][j]}", end="")
+                    else:
+                        print("   *", end="")
+                print()
