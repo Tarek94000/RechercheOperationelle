@@ -18,7 +18,7 @@ def main():
                 print("Entrée invalide. Veuillez entrer un nombre entre 1 et 10.")
         
         # Construct the file path
-        fichier = f"fig/fig{choix_fichier}.txt"
+        fichier = f"Propositions/Proposition {choix_fichier}.txt"
         print(f"Fichier sélectionné : {fichier}")
         
         # Load the graph

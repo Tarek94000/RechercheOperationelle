@@ -1,0 +1,44 @@
+Fichier sélectionné : Propositions/Proposition 1.txt
+
+* Matrice des capacités:
+
+     s   a   b   c   d   e   f   t
+s    *   9   5   7   *   *   *   *
+a    *   *   6   *   6   *   *   *
+b    *   *   *   *   *   7   *   *
+c    *   *   *   *   *   2   8   *
+d    *   *   3   *   *   *   *   8
+e    *   *   *   *   *   *   *  10
+f    *   *   *   *   *   3   *   5
+t    *   *   *   *   *   *   *   *
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   f   t
+s    *   8   5   7   *   *   *   *
+a   -8   *   2   *   6   *   *   *
+b   -5  -2   *   *   *   7   *   *
+c   -7   *   *   *   *   2   5   *
+d    *  -6   *   *   *   *   *   6
+e    *   *  -7  -2   *   *   *   9
+f    *   *   *  -5   *   *   *   5
+t    *   *   *   *  -6  -9  -5   *
+Max flow Ford-Fulkerson: 20
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   f   t
+s    *   8   5   7   *   *   *   *
+a   -8   *   2   *   6   *   *   *
+b   -5  -2   *   *   *   7   *   *
+c   -7   *   *   *   *   2   5   *
+d    *  -6   *   *   *   *   *   6
+e    *   *  -7  -2   *   *   *   9
+f    *   *   *  -5   *   *   *   5
+t    *   *   *   *  -6  -9  -5   *
+Max flow Push-Relabel: 20
+
+
+* Pas de coûts fournis

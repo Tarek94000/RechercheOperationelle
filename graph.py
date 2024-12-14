@@ -108,7 +108,7 @@ class Graphique:
             elif i == len(capacity)-1:
                 print(f"t ", end="")
             else:
-                print(chr(i+97), "", end="")
+                print(chr(i+96), "", end="")
             
             # Vérifie si la tâche actuelle est un prédécesseur de task2
             for j in range(len(capacity)):

@@ -1,0 +1,5550 @@
+Fichier sélectionné : Propositions/Proposition 10.txt
+
+* Matrice des capacités:
+
+     s   a   b   c   d   e   t
+s    *  150  150   *   *   *   *
+a    *   *   *  120  100   *   *
+b    *   *   *   *  100  120   *
+c    *   *   *   *   *   *  150
+d    *   *   *  50   *   *  80
+e    *   *   *   *  50   *  150
+t    *   *   *   *   *   *   *
+
+
+* Matrice des prix:
+
+     s   a   b   c   d   e   t
+s    *   2   3   *   *   *   *
+a    *   *   *   4   1   *   *
+b    *   *   *   *   2   5   *
+c    *   *   *   *   *   *   3
+d    *   *   *   6   *   *   3
+e    *   *   *   *   8   *   4
+t    *   *   *   *   *   *   *
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  150   *   *   *   *
+a   -150   *   *  120  30   *   *
+b   -150   *   *   *  50  100   *
+c    *  -120   *   *   *   *  120
+d    *  -30  -50   *   *   *  80
+e    *   *  -100   *   *   *  100
+t    *   *   *  -120  -80  -100   *
+Max flow Ford-Fulkerson: 300
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  150   *   *   *   *
+a   -150   *   *  120  30   *   *
+b   -150   *   *   *  80  70   *
+c    *  -120   *   *  -30   *  150
+d    *  -30  -80  30   *   *  80
+e    *   *  -70   *   *   *  70
+t    *   *   *  -150  -80  -70   *
+Max flow Push-Relabel: 300
+
+
+* Itération 1 :
+Flot ajouté : 1, Flot total : 1, Coût total : 6
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *   1   *   *   *   *   *
+a   -1   *   *   *   1   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -1   *   *   *   *   1
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -1   *   *
+Max flow: 6
+
+
+* Itération 2 :
+Flot ajouté : 2, Flot total : 2, Coût total : 12
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *   2   *   *   *   *   *
+a   -2   *   *   *   2   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -2   *   *   *   *   2
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -2   *   *
+Max flow: 12
+
+
+* Itération 3 :
+Flot ajouté : 3, Flot total : 3, Coût total : 18
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *   3   *   *   *   *   *
+a   -3   *   *   *   3   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -3   *   *   *   *   3
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -3   *   *
+Max flow: 18
+
+
+* Itération 4 :
+Flot ajouté : 4, Flot total : 4, Coût total : 24
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *   4   *   *   *   *   *
+a   -4   *   *   *   4   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -4   *   *   *   *   4
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -4   *   *
+Max flow: 24
+
+
+* Itération 5 :
+Flot ajouté : 5, Flot total : 5, Coût total : 30
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *   5   *   *   *   *   *
+a   -5   *   *   *   5   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -5   *   *   *   *   5
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -5   *   *
+Max flow: 30
+
+
+* Itération 6 :
+Flot ajouté : 6, Flot total : 6, Coût total : 36
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *   6   *   *   *   *   *
+a   -6   *   *   *   6   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -6   *   *   *   *   6
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -6   *   *
+Max flow: 36
+
+
+* Itération 7 :
+Flot ajouté : 7, Flot total : 7, Coût total : 42
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *   7   *   *   *   *   *
+a   -7   *   *   *   7   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -7   *   *   *   *   7
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -7   *   *
+Max flow: 42
+
+
+* Itération 8 :
+Flot ajouté : 8, Flot total : 8, Coût total : 48
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *   8   *   *   *   *   *
+a   -8   *   *   *   8   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -8   *   *   *   *   8
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -8   *   *
+Max flow: 48
+
+
+* Itération 9 :
+Flot ajouté : 9, Flot total : 9, Coût total : 54
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *   9   *   *   *   *   *
+a   -9   *   *   *   9   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -9   *   *   *   *   9
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -9   *   *
+Max flow: 54
+
+
+* Itération 10 :
+Flot ajouté : 10, Flot total : 10, Coût total : 60
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  10   *   *   *   *   *
+a   -10   *   *   *  10   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -10   *   *   *   *  10
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -10   *   *
+Max flow: 60
+
+
+* Itération 11 :
+Flot ajouté : 11, Flot total : 11, Coût total : 66
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  11   *   *   *   *   *
+a   -11   *   *   *  11   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -11   *   *   *   *  11
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -11   *   *
+Max flow: 66
+
+
+* Itération 12 :
+Flot ajouté : 12, Flot total : 12, Coût total : 72
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  12   *   *   *   *   *
+a   -12   *   *   *  12   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -12   *   *   *   *  12
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -12   *   *
+Max flow: 72
+
+
+* Itération 13 :
+Flot ajouté : 13, Flot total : 13, Coût total : 78
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  13   *   *   *   *   *
+a   -13   *   *   *  13   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -13   *   *   *   *  13
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -13   *   *
+Max flow: 78
+
+
+* Itération 14 :
+Flot ajouté : 14, Flot total : 14, Coût total : 84
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  14   *   *   *   *   *
+a   -14   *   *   *  14   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -14   *   *   *   *  14
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -14   *   *
+Max flow: 84
+
+
+* Itération 15 :
+Flot ajouté : 15, Flot total : 15, Coût total : 90
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  15   *   *   *   *   *
+a   -15   *   *   *  15   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -15   *   *   *   *  15
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -15   *   *
+Max flow: 90
+
+
+* Itération 16 :
+Flot ajouté : 16, Flot total : 16, Coût total : 96
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  16   *   *   *   *   *
+a   -16   *   *   *  16   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -16   *   *   *   *  16
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -16   *   *
+Max flow: 96
+
+
+* Itération 17 :
+Flot ajouté : 17, Flot total : 17, Coût total : 102
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  17   *   *   *   *   *
+a   -17   *   *   *  17   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -17   *   *   *   *  17
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -17   *   *
+Max flow: 102
+
+
+* Itération 18 :
+Flot ajouté : 18, Flot total : 18, Coût total : 108
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  18   *   *   *   *   *
+a   -18   *   *   *  18   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -18   *   *   *   *  18
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -18   *   *
+Max flow: 108
+
+
+* Itération 19 :
+Flot ajouté : 19, Flot total : 19, Coût total : 114
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  19   *   *   *   *   *
+a   -19   *   *   *  19   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -19   *   *   *   *  19
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -19   *   *
+Max flow: 114
+
+
+* Itération 20 :
+Flot ajouté : 20, Flot total : 20, Coût total : 120
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  20   *   *   *   *   *
+a   -20   *   *   *  20   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -20   *   *   *   *  20
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -20   *   *
+Max flow: 120
+
+
+* Itération 21 :
+Flot ajouté : 21, Flot total : 21, Coût total : 126
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  21   *   *   *   *   *
+a   -21   *   *   *  21   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -21   *   *   *   *  21
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -21   *   *
+Max flow: 126
+
+
+* Itération 22 :
+Flot ajouté : 22, Flot total : 22, Coût total : 132
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  22   *   *   *   *   *
+a   -22   *   *   *  22   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -22   *   *   *   *  22
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -22   *   *
+Max flow: 132
+
+
+* Itération 23 :
+Flot ajouté : 23, Flot total : 23, Coût total : 138
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  23   *   *   *   *   *
+a   -23   *   *   *  23   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -23   *   *   *   *  23
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -23   *   *
+Max flow: 138
+
+
+* Itération 24 :
+Flot ajouté : 24, Flot total : 24, Coût total : 144
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  24   *   *   *   *   *
+a   -24   *   *   *  24   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -24   *   *   *   *  24
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -24   *   *
+Max flow: 144
+
+
+* Itération 25 :
+Flot ajouté : 25, Flot total : 25, Coût total : 150
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  25   *   *   *   *   *
+a   -25   *   *   *  25   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -25   *   *   *   *  25
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -25   *   *
+Max flow: 150
+
+
+* Itération 26 :
+Flot ajouté : 26, Flot total : 26, Coût total : 156
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  26   *   *   *   *   *
+a   -26   *   *   *  26   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -26   *   *   *   *  26
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -26   *   *
+Max flow: 156
+
+
+* Itération 27 :
+Flot ajouté : 27, Flot total : 27, Coût total : 162
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  27   *   *   *   *   *
+a   -27   *   *   *  27   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -27   *   *   *   *  27
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -27   *   *
+Max flow: 162
+
+
+* Itération 28 :
+Flot ajouté : 28, Flot total : 28, Coût total : 168
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  28   *   *   *   *   *
+a   -28   *   *   *  28   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -28   *   *   *   *  28
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -28   *   *
+Max flow: 168
+
+
+* Itération 29 :
+Flot ajouté : 29, Flot total : 29, Coût total : 174
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  29   *   *   *   *   *
+a   -29   *   *   *  29   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -29   *   *   *   *  29
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -29   *   *
+Max flow: 174
+
+
+* Itération 30 :
+Flot ajouté : 30, Flot total : 30, Coût total : 180
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  30   *   *   *   *   *
+a   -30   *   *   *  30   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -30   *   *   *   *  30
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -30   *   *
+Max flow: 180
+
+
+* Itération 31 :
+Flot ajouté : 31, Flot total : 31, Coût total : 186
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  31   *   *   *   *   *
+a   -31   *   *   *  31   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -31   *   *   *   *  31
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -31   *   *
+Max flow: 186
+
+
+* Itération 32 :
+Flot ajouté : 32, Flot total : 32, Coût total : 192
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  32   *   *   *   *   *
+a   -32   *   *   *  32   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -32   *   *   *   *  32
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -32   *   *
+Max flow: 192
+
+
+* Itération 33 :
+Flot ajouté : 33, Flot total : 33, Coût total : 198
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  33   *   *   *   *   *
+a   -33   *   *   *  33   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -33   *   *   *   *  33
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -33   *   *
+Max flow: 198
+
+
+* Itération 34 :
+Flot ajouté : 34, Flot total : 34, Coût total : 204
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  34   *   *   *   *   *
+a   -34   *   *   *  34   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -34   *   *   *   *  34
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -34   *   *
+Max flow: 204
+
+
+* Itération 35 :
+Flot ajouté : 35, Flot total : 35, Coût total : 210
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  35   *   *   *   *   *
+a   -35   *   *   *  35   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -35   *   *   *   *  35
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -35   *   *
+Max flow: 210
+
+
+* Itération 36 :
+Flot ajouté : 36, Flot total : 36, Coût total : 216
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  36   *   *   *   *   *
+a   -36   *   *   *  36   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -36   *   *   *   *  36
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -36   *   *
+Max flow: 216
+
+
+* Itération 37 :
+Flot ajouté : 37, Flot total : 37, Coût total : 222
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  37   *   *   *   *   *
+a   -37   *   *   *  37   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -37   *   *   *   *  37
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -37   *   *
+Max flow: 222
+
+
+* Itération 38 :
+Flot ajouté : 38, Flot total : 38, Coût total : 228
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  38   *   *   *   *   *
+a   -38   *   *   *  38   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -38   *   *   *   *  38
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -38   *   *
+Max flow: 228
+
+
+* Itération 39 :
+Flot ajouté : 39, Flot total : 39, Coût total : 234
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  39   *   *   *   *   *
+a   -39   *   *   *  39   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -39   *   *   *   *  39
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -39   *   *
+Max flow: 234
+
+
+* Itération 40 :
+Flot ajouté : 40, Flot total : 40, Coût total : 240
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  40   *   *   *   *   *
+a   -40   *   *   *  40   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -40   *   *   *   *  40
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -40   *   *
+Max flow: 240
+
+
+* Itération 41 :
+Flot ajouté : 41, Flot total : 41, Coût total : 246
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  41   *   *   *   *   *
+a   -41   *   *   *  41   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -41   *   *   *   *  41
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -41   *   *
+Max flow: 246
+
+
+* Itération 42 :
+Flot ajouté : 42, Flot total : 42, Coût total : 252
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  42   *   *   *   *   *
+a   -42   *   *   *  42   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -42   *   *   *   *  42
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -42   *   *
+Max flow: 252
+
+
+* Itération 43 :
+Flot ajouté : 43, Flot total : 43, Coût total : 258
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  43   *   *   *   *   *
+a   -43   *   *   *  43   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -43   *   *   *   *  43
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -43   *   *
+Max flow: 258
+
+
+* Itération 44 :
+Flot ajouté : 44, Flot total : 44, Coût total : 264
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  44   *   *   *   *   *
+a   -44   *   *   *  44   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -44   *   *   *   *  44
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -44   *   *
+Max flow: 264
+
+
+* Itération 45 :
+Flot ajouté : 45, Flot total : 45, Coût total : 270
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  45   *   *   *   *   *
+a   -45   *   *   *  45   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -45   *   *   *   *  45
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -45   *   *
+Max flow: 270
+
+
+* Itération 46 :
+Flot ajouté : 46, Flot total : 46, Coût total : 276
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  46   *   *   *   *   *
+a   -46   *   *   *  46   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -46   *   *   *   *  46
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -46   *   *
+Max flow: 276
+
+
+* Itération 47 :
+Flot ajouté : 47, Flot total : 47, Coût total : 282
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  47   *   *   *   *   *
+a   -47   *   *   *  47   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -47   *   *   *   *  47
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -47   *   *
+Max flow: 282
+
+
+* Itération 48 :
+Flot ajouté : 48, Flot total : 48, Coût total : 288
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  48   *   *   *   *   *
+a   -48   *   *   *  48   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -48   *   *   *   *  48
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -48   *   *
+Max flow: 288
+
+
+* Itération 49 :
+Flot ajouté : 49, Flot total : 49, Coût total : 294
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  49   *   *   *   *   *
+a   -49   *   *   *  49   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -49   *   *   *   *  49
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -49   *   *
+Max flow: 294
+
+
+* Itération 50 :
+Flot ajouté : 50, Flot total : 50, Coût total : 300
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  50   *   *   *   *   *
+a   -50   *   *   *  50   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -50   *   *   *   *  50
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -50   *   *
+Max flow: 300
+
+
+* Itération 51 :
+Flot ajouté : 51, Flot total : 51, Coût total : 306
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  51   *   *   *   *   *
+a   -51   *   *   *  51   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -51   *   *   *   *  51
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -51   *   *
+Max flow: 306
+
+
+* Itération 52 :
+Flot ajouté : 52, Flot total : 52, Coût total : 312
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  52   *   *   *   *   *
+a   -52   *   *   *  52   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -52   *   *   *   *  52
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -52   *   *
+Max flow: 312
+
+
+* Itération 53 :
+Flot ajouté : 53, Flot total : 53, Coût total : 318
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  53   *   *   *   *   *
+a   -53   *   *   *  53   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -53   *   *   *   *  53
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -53   *   *
+Max flow: 318
+
+
+* Itération 54 :
+Flot ajouté : 54, Flot total : 54, Coût total : 324
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  54   *   *   *   *   *
+a   -54   *   *   *  54   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -54   *   *   *   *  54
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -54   *   *
+Max flow: 324
+
+
+* Itération 55 :
+Flot ajouté : 55, Flot total : 55, Coût total : 330
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  55   *   *   *   *   *
+a   -55   *   *   *  55   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -55   *   *   *   *  55
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -55   *   *
+Max flow: 330
+
+
+* Itération 56 :
+Flot ajouté : 56, Flot total : 56, Coût total : 336
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  56   *   *   *   *   *
+a   -56   *   *   *  56   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -56   *   *   *   *  56
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -56   *   *
+Max flow: 336
+
+
+* Itération 57 :
+Flot ajouté : 57, Flot total : 57, Coût total : 342
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  57   *   *   *   *   *
+a   -57   *   *   *  57   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -57   *   *   *   *  57
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -57   *   *
+Max flow: 342
+
+
+* Itération 58 :
+Flot ajouté : 58, Flot total : 58, Coût total : 348
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  58   *   *   *   *   *
+a   -58   *   *   *  58   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -58   *   *   *   *  58
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -58   *   *
+Max flow: 348
+
+
+* Itération 59 :
+Flot ajouté : 59, Flot total : 59, Coût total : 354
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  59   *   *   *   *   *
+a   -59   *   *   *  59   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -59   *   *   *   *  59
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -59   *   *
+Max flow: 354
+
+
+* Itération 60 :
+Flot ajouté : 60, Flot total : 60, Coût total : 360
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  60   *   *   *   *   *
+a   -60   *   *   *  60   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -60   *   *   *   *  60
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -60   *   *
+Max flow: 360
+
+
+* Itération 61 :
+Flot ajouté : 61, Flot total : 61, Coût total : 366
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  61   *   *   *   *   *
+a   -61   *   *   *  61   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -61   *   *   *   *  61
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -61   *   *
+Max flow: 366
+
+
+* Itération 62 :
+Flot ajouté : 62, Flot total : 62, Coût total : 372
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  62   *   *   *   *   *
+a   -62   *   *   *  62   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -62   *   *   *   *  62
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -62   *   *
+Max flow: 372
+
+
+* Itération 63 :
+Flot ajouté : 63, Flot total : 63, Coût total : 378
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  63   *   *   *   *   *
+a   -63   *   *   *  63   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -63   *   *   *   *  63
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -63   *   *
+Max flow: 378
+
+
+* Itération 64 :
+Flot ajouté : 64, Flot total : 64, Coût total : 384
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  64   *   *   *   *   *
+a   -64   *   *   *  64   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -64   *   *   *   *  64
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -64   *   *
+Max flow: 384
+
+
+* Itération 65 :
+Flot ajouté : 65, Flot total : 65, Coût total : 390
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  65   *   *   *   *   *
+a   -65   *   *   *  65   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -65   *   *   *   *  65
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -65   *   *
+Max flow: 390
+
+
+* Itération 66 :
+Flot ajouté : 66, Flot total : 66, Coût total : 396
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  66   *   *   *   *   *
+a   -66   *   *   *  66   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -66   *   *   *   *  66
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -66   *   *
+Max flow: 396
+
+
+* Itération 67 :
+Flot ajouté : 67, Flot total : 67, Coût total : 402
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  67   *   *   *   *   *
+a   -67   *   *   *  67   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -67   *   *   *   *  67
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -67   *   *
+Max flow: 402
+
+
+* Itération 68 :
+Flot ajouté : 68, Flot total : 68, Coût total : 408
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  68   *   *   *   *   *
+a   -68   *   *   *  68   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -68   *   *   *   *  68
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -68   *   *
+Max flow: 408
+
+
+* Itération 69 :
+Flot ajouté : 69, Flot total : 69, Coût total : 414
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  69   *   *   *   *   *
+a   -69   *   *   *  69   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -69   *   *   *   *  69
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -69   *   *
+Max flow: 414
+
+
+* Itération 70 :
+Flot ajouté : 70, Flot total : 70, Coût total : 420
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  70   *   *   *   *   *
+a   -70   *   *   *  70   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -70   *   *   *   *  70
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -70   *   *
+Max flow: 420
+
+
+* Itération 71 :
+Flot ajouté : 71, Flot total : 71, Coût total : 426
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  71   *   *   *   *   *
+a   -71   *   *   *  71   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -71   *   *   *   *  71
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -71   *   *
+Max flow: 426
+
+
+* Itération 72 :
+Flot ajouté : 72, Flot total : 72, Coût total : 432
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  72   *   *   *   *   *
+a   -72   *   *   *  72   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -72   *   *   *   *  72
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -72   *   *
+Max flow: 432
+
+
+* Itération 73 :
+Flot ajouté : 73, Flot total : 73, Coût total : 438
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  73   *   *   *   *   *
+a   -73   *   *   *  73   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -73   *   *   *   *  73
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -73   *   *
+Max flow: 438
+
+
+* Itération 74 :
+Flot ajouté : 74, Flot total : 74, Coût total : 444
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  74   *   *   *   *   *
+a   -74   *   *   *  74   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -74   *   *   *   *  74
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -74   *   *
+Max flow: 444
+
+
+* Itération 75 :
+Flot ajouté : 75, Flot total : 75, Coût total : 450
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  75   *   *   *   *   *
+a   -75   *   *   *  75   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -75   *   *   *   *  75
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -75   *   *
+Max flow: 450
+
+
+* Itération 76 :
+Flot ajouté : 76, Flot total : 76, Coût total : 456
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  76   *   *   *   *   *
+a   -76   *   *   *  76   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -76   *   *   *   *  76
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -76   *   *
+Max flow: 456
+
+
+* Itération 77 :
+Flot ajouté : 77, Flot total : 77, Coût total : 462
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  77   *   *   *   *   *
+a   -77   *   *   *  77   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -77   *   *   *   *  77
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -77   *   *
+Max flow: 462
+
+
+* Itération 78 :
+Flot ajouté : 78, Flot total : 78, Coût total : 468
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  78   *   *   *   *   *
+a   -78   *   *   *  78   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -78   *   *   *   *  78
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -78   *   *
+Max flow: 468
+
+
+* Itération 79 :
+Flot ajouté : 79, Flot total : 79, Coût total : 474
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  79   *   *   *   *   *
+a   -79   *   *   *  79   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -79   *   *   *   *  79
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -79   *   *
+Max flow: 474
+
+
+* Itération 80 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  80   *   *   *   *   *
+a   -80   *   *   *  80   *   *
+b    *   *   *   *   *   *   *
+c    *   *   *   *   *   *   *
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *   *  -80   *   *
+Max flow: 480
+
+
+* Itération 81 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 1, Flot total : 81, Coût total : 489
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  81   *   *   *   *   *
+a   -81   *   *   1  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -1   *   *   *   *   1
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -1  -80   *   *
+Max flow: 489
+
+
+* Itération 82 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 2, Flot total : 82, Coût total : 498
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  82   *   *   *   *   *
+a   -82   *   *   2  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -2   *   *   *   *   2
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -2  -80   *   *
+Max flow: 498
+
+
+* Itération 83 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 3, Flot total : 83, Coût total : 507
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  83   *   *   *   *   *
+a   -83   *   *   3  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -3   *   *   *   *   3
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -3  -80   *   *
+Max flow: 507
+
+
+* Itération 84 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 4, Flot total : 84, Coût total : 516
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  84   *   *   *   *   *
+a   -84   *   *   4  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -4   *   *   *   *   4
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -4  -80   *   *
+Max flow: 516
+
+
+* Itération 85 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 5, Flot total : 85, Coût total : 525
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  85   *   *   *   *   *
+a   -85   *   *   5  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -5   *   *   *   *   5
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -5  -80   *   *
+Max flow: 525
+
+
+* Itération 86 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 6, Flot total : 86, Coût total : 534
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  86   *   *   *   *   *
+a   -86   *   *   6  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -6   *   *   *   *   6
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -6  -80   *   *
+Max flow: 534
+
+
+* Itération 87 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 7, Flot total : 87, Coût total : 543
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  87   *   *   *   *   *
+a   -87   *   *   7  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -7   *   *   *   *   7
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -7  -80   *   *
+Max flow: 543
+
+
+* Itération 88 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 8, Flot total : 88, Coût total : 552
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  88   *   *   *   *   *
+a   -88   *   *   8  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -8   *   *   *   *   8
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -8  -80   *   *
+Max flow: 552
+
+
+* Itération 89 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 9, Flot total : 89, Coût total : 561
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  89   *   *   *   *   *
+a   -89   *   *   9  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -9   *   *   *   *   9
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -9  -80   *   *
+Max flow: 561
+
+
+* Itération 90 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 10, Flot total : 90, Coût total : 570
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  90   *   *   *   *   *
+a   -90   *   *  10  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -10   *   *   *   *  10
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -10  -80   *   *
+Max flow: 570
+
+
+* Itération 91 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 11, Flot total : 91, Coût total : 579
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  91   *   *   *   *   *
+a   -91   *   *  11  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -11   *   *   *   *  11
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -11  -80   *   *
+Max flow: 579
+
+
+* Itération 92 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 12, Flot total : 92, Coût total : 588
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  92   *   *   *   *   *
+a   -92   *   *  12  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -12   *   *   *   *  12
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -12  -80   *   *
+Max flow: 588
+
+
+* Itération 93 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 13, Flot total : 93, Coût total : 597
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  93   *   *   *   *   *
+a   -93   *   *  13  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -13   *   *   *   *  13
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -13  -80   *   *
+Max flow: 597
+
+
+* Itération 94 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 14, Flot total : 94, Coût total : 606
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  94   *   *   *   *   *
+a   -94   *   *  14  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -14   *   *   *   *  14
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -14  -80   *   *
+Max flow: 606
+
+
+* Itération 95 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 15, Flot total : 95, Coût total : 615
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  95   *   *   *   *   *
+a   -95   *   *  15  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -15   *   *   *   *  15
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -15  -80   *   *
+Max flow: 615
+
+
+* Itération 96 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 16, Flot total : 96, Coût total : 624
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  96   *   *   *   *   *
+a   -96   *   *  16  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -16   *   *   *   *  16
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -16  -80   *   *
+Max flow: 624
+
+
+* Itération 97 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 17, Flot total : 97, Coût total : 633
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  97   *   *   *   *   *
+a   -97   *   *  17  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -17   *   *   *   *  17
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -17  -80   *   *
+Max flow: 633
+
+
+* Itération 98 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 18, Flot total : 98, Coût total : 642
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  98   *   *   *   *   *
+a   -98   *   *  18  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -18   *   *   *   *  18
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -18  -80   *   *
+Max flow: 642
+
+
+* Itération 99 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 19, Flot total : 99, Coût total : 651
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  99   *   *   *   *   *
+a   -99   *   *  19  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -19   *   *   *   *  19
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -19  -80   *   *
+Max flow: 651
+
+
+* Itération 100 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 20, Flot total : 100, Coût total : 660
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  100   *   *   *   *   *
+a   -100   *   *  20  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -20   *   *   *   *  20
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -20  -80   *   *
+Max flow: 660
+
+
+* Itération 101 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 21, Flot total : 101, Coût total : 669
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  101   *   *   *   *   *
+a   -101   *   *  21  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -21   *   *   *   *  21
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -21  -80   *   *
+Max flow: 669
+
+
+* Itération 102 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 22, Flot total : 102, Coût total : 678
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  102   *   *   *   *   *
+a   -102   *   *  22  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -22   *   *   *   *  22
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -22  -80   *   *
+Max flow: 678
+
+
+* Itération 103 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 23, Flot total : 103, Coût total : 687
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  103   *   *   *   *   *
+a   -103   *   *  23  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -23   *   *   *   *  23
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -23  -80   *   *
+Max flow: 687
+
+
+* Itération 104 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 24, Flot total : 104, Coût total : 696
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  104   *   *   *   *   *
+a   -104   *   *  24  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -24   *   *   *   *  24
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -24  -80   *   *
+Max flow: 696
+
+
+* Itération 105 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 25, Flot total : 105, Coût total : 705
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  105   *   *   *   *   *
+a   -105   *   *  25  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -25   *   *   *   *  25
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -25  -80   *   *
+Max flow: 705
+
+
+* Itération 106 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 26, Flot total : 106, Coût total : 714
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  106   *   *   *   *   *
+a   -106   *   *  26  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -26   *   *   *   *  26
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -26  -80   *   *
+Max flow: 714
+
+
+* Itération 107 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 27, Flot total : 107, Coût total : 723
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  107   *   *   *   *   *
+a   -107   *   *  27  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -27   *   *   *   *  27
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -27  -80   *   *
+Max flow: 723
+
+
+* Itération 108 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 28, Flot total : 108, Coût total : 732
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  108   *   *   *   *   *
+a   -108   *   *  28  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -28   *   *   *   *  28
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -28  -80   *   *
+Max flow: 732
+
+
+* Itération 109 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 29, Flot total : 109, Coût total : 741
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  109   *   *   *   *   *
+a   -109   *   *  29  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -29   *   *   *   *  29
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -29  -80   *   *
+Max flow: 741
+
+
+* Itération 110 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 30, Flot total : 110, Coût total : 750
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  110   *   *   *   *   *
+a   -110   *   *  30  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -30   *   *   *   *  30
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -30  -80   *   *
+Max flow: 750
+
+
+* Itération 111 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 31, Flot total : 111, Coût total : 759
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  111   *   *   *   *   *
+a   -111   *   *  31  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -31   *   *   *   *  31
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -31  -80   *   *
+Max flow: 759
+
+
+* Itération 112 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 32, Flot total : 112, Coût total : 768
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  112   *   *   *   *   *
+a   -112   *   *  32  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -32   *   *   *   *  32
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -32  -80   *   *
+Max flow: 768
+
+
+* Itération 113 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 33, Flot total : 113, Coût total : 777
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  113   *   *   *   *   *
+a   -113   *   *  33  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -33   *   *   *   *  33
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -33  -80   *   *
+Max flow: 777
+
+
+* Itération 114 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 34, Flot total : 114, Coût total : 786
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  114   *   *   *   *   *
+a   -114   *   *  34  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -34   *   *   *   *  34
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -34  -80   *   *
+Max flow: 786
+
+
+* Itération 115 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 35, Flot total : 115, Coût total : 795
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  115   *   *   *   *   *
+a   -115   *   *  35  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -35   *   *   *   *  35
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -35  -80   *   *
+Max flow: 795
+
+
+* Itération 116 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 36, Flot total : 116, Coût total : 804
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  116   *   *   *   *   *
+a   -116   *   *  36  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -36   *   *   *   *  36
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -36  -80   *   *
+Max flow: 804
+
+
+* Itération 117 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 37, Flot total : 117, Coût total : 813
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  117   *   *   *   *   *
+a   -117   *   *  37  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -37   *   *   *   *  37
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -37  -80   *   *
+Max flow: 813
+
+
+* Itération 118 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 38, Flot total : 118, Coût total : 822
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  118   *   *   *   *   *
+a   -118   *   *  38  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -38   *   *   *   *  38
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -38  -80   *   *
+Max flow: 822
+
+
+* Itération 119 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 39, Flot total : 119, Coût total : 831
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  119   *   *   *   *   *
+a   -119   *   *  39  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -39   *   *   *   *  39
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -39  -80   *   *
+Max flow: 831
+
+
+* Itération 120 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 40, Flot total : 120, Coût total : 840
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  120   *   *   *   *   *
+a   -120   *   *  40  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -40   *   *   *   *  40
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -40  -80   *   *
+Max flow: 840
+
+
+* Itération 121 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 41, Flot total : 121, Coût total : 849
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  121   *   *   *   *   *
+a   -121   *   *  41  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -41   *   *   *   *  41
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -41  -80   *   *
+Max flow: 849
+
+
+* Itération 122 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 42, Flot total : 122, Coût total : 858
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  122   *   *   *   *   *
+a   -122   *   *  42  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -42   *   *   *   *  42
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -42  -80   *   *
+Max flow: 858
+
+
+* Itération 123 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 43, Flot total : 123, Coût total : 867
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  123   *   *   *   *   *
+a   -123   *   *  43  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -43   *   *   *   *  43
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -43  -80   *   *
+Max flow: 867
+
+
+* Itération 124 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 44, Flot total : 124, Coût total : 876
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  124   *   *   *   *   *
+a   -124   *   *  44  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -44   *   *   *   *  44
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -44  -80   *   *
+Max flow: 876
+
+
+* Itération 125 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 45, Flot total : 125, Coût total : 885
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  125   *   *   *   *   *
+a   -125   *   *  45  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -45   *   *   *   *  45
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -45  -80   *   *
+Max flow: 885
+
+
+* Itération 126 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 46, Flot total : 126, Coût total : 894
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  126   *   *   *   *   *
+a   -126   *   *  46  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -46   *   *   *   *  46
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -46  -80   *   *
+Max flow: 894
+
+
+* Itération 127 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 47, Flot total : 127, Coût total : 903
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  127   *   *   *   *   *
+a   -127   *   *  47  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -47   *   *   *   *  47
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -47  -80   *   *
+Max flow: 903
+
+
+* Itération 128 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 48, Flot total : 128, Coût total : 912
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  128   *   *   *   *   *
+a   -128   *   *  48  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -48   *   *   *   *  48
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -48  -80   *   *
+Max flow: 912
+
+
+* Itération 129 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 49, Flot total : 129, Coût total : 921
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  129   *   *   *   *   *
+a   -129   *   *  49  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -49   *   *   *   *  49
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -49  -80   *   *
+Max flow: 921
+
+
+* Itération 130 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 50, Flot total : 130, Coût total : 930
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  130   *   *   *   *   *
+a   -130   *   *  50  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -50   *   *   *   *  50
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -50  -80   *   *
+Max flow: 930
+
+
+* Itération 131 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 51, Flot total : 131, Coût total : 939
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  131   *   *   *   *   *
+a   -131   *   *  51  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -51   *   *   *   *  51
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -51  -80   *   *
+Max flow: 939
+
+
+* Itération 132 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 52, Flot total : 132, Coût total : 948
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  132   *   *   *   *   *
+a   -132   *   *  52  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -52   *   *   *   *  52
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -52  -80   *   *
+Max flow: 948
+
+
+* Itération 133 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 53, Flot total : 133, Coût total : 957
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  133   *   *   *   *   *
+a   -133   *   *  53  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -53   *   *   *   *  53
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -53  -80   *   *
+Max flow: 957
+
+
+* Itération 134 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 54, Flot total : 134, Coût total : 966
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  134   *   *   *   *   *
+a   -134   *   *  54  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -54   *   *   *   *  54
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -54  -80   *   *
+Max flow: 966
+
+
+* Itération 135 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 55, Flot total : 135, Coût total : 975
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  135   *   *   *   *   *
+a   -135   *   *  55  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -55   *   *   *   *  55
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -55  -80   *   *
+Max flow: 975
+
+
+* Itération 136 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 56, Flot total : 136, Coût total : 984
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  136   *   *   *   *   *
+a   -136   *   *  56  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -56   *   *   *   *  56
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -56  -80   *   *
+Max flow: 984
+
+
+* Itération 137 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 57, Flot total : 137, Coût total : 993
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  137   *   *   *   *   *
+a   -137   *   *  57  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -57   *   *   *   *  57
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -57  -80   *   *
+Max flow: 993
+
+
+* Itération 138 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 58, Flot total : 138, Coût total : 1002
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  138   *   *   *   *   *
+a   -138   *   *  58  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -58   *   *   *   *  58
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -58  -80   *   *
+Max flow: 1002
+
+
+* Itération 139 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 59, Flot total : 139, Coût total : 1011
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  139   *   *   *   *   *
+a   -139   *   *  59  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -59   *   *   *   *  59
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -59  -80   *   *
+Max flow: 1011
+
+
+* Itération 140 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 60, Flot total : 140, Coût total : 1020
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  140   *   *   *   *   *
+a   -140   *   *  60  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -60   *   *   *   *  60
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -60  -80   *   *
+Max flow: 1020
+
+
+* Itération 141 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 61, Flot total : 141, Coût total : 1029
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  141   *   *   *   *   *
+a   -141   *   *  61  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -61   *   *   *   *  61
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -61  -80   *   *
+Max flow: 1029
+
+
+* Itération 142 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 62, Flot total : 142, Coût total : 1038
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  142   *   *   *   *   *
+a   -142   *   *  62  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -62   *   *   *   *  62
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -62  -80   *   *
+Max flow: 1038
+
+
+* Itération 143 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 63, Flot total : 143, Coût total : 1047
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  143   *   *   *   *   *
+a   -143   *   *  63  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -63   *   *   *   *  63
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -63  -80   *   *
+Max flow: 1047
+
+
+* Itération 144 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 64, Flot total : 144, Coût total : 1056
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  144   *   *   *   *   *
+a   -144   *   *  64  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -64   *   *   *   *  64
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -64  -80   *   *
+Max flow: 1056
+
+
+* Itération 145 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 65, Flot total : 145, Coût total : 1065
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  145   *   *   *   *   *
+a   -145   *   *  65  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -65   *   *   *   *  65
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -65  -80   *   *
+Max flow: 1065
+
+
+* Itération 146 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 66, Flot total : 146, Coût total : 1074
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  146   *   *   *   *   *
+a   -146   *   *  66  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -66   *   *   *   *  66
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -66  -80   *   *
+Max flow: 1074
+
+
+* Itération 147 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 67, Flot total : 147, Coût total : 1083
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  147   *   *   *   *   *
+a   -147   *   *  67  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -67   *   *   *   *  67
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -67  -80   *   *
+Max flow: 1083
+
+
+* Itération 148 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 68, Flot total : 148, Coût total : 1092
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  148   *   *   *   *   *
+a   -148   *   *  68  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -68   *   *   *   *  68
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -68  -80   *   *
+Max flow: 1092
+
+
+* Itération 149 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 69, Flot total : 149, Coût total : 1101
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  149   *   *   *   *   *
+a   -149   *   *  69  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -69   *   *   *   *  69
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -69  -80   *   *
+Max flow: 1101
+
+
+* Itération 150 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150   *   *   *   *   *
+a   -150   *   *  70  80   *   *
+b    *   *   *   *   *   *   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *   *   *   *   *   *
+t    *   *   *  -70  -80   *   *
+Max flow: 1110
+
+
+* Itération 151 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 1, Flot total : 151, Coût total : 1122
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150   1   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -1   *   *   *   *   1   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -1   *   *   *   1
+t    *   *   *  -70  -80  -1   *
+Max flow: 1122
+
+
+* Itération 152 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 2, Flot total : 152, Coût total : 1134
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150   2   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -2   *   *   *   *   2   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -2   *   *   *   2
+t    *   *   *  -70  -80  -2   *
+Max flow: 1134
+
+
+* Itération 153 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 3, Flot total : 153, Coût total : 1146
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150   3   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -3   *   *   *   *   3   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -3   *   *   *   3
+t    *   *   *  -70  -80  -3   *
+Max flow: 1146
+
+
+* Itération 154 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 4, Flot total : 154, Coût total : 1158
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150   4   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -4   *   *   *   *   4   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -4   *   *   *   4
+t    *   *   *  -70  -80  -4   *
+Max flow: 1158
+
+
+* Itération 155 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 5, Flot total : 155, Coût total : 1170
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150   5   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -5   *   *   *   *   5   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -5   *   *   *   5
+t    *   *   *  -70  -80  -5   *
+Max flow: 1170
+
+
+* Itération 156 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 6, Flot total : 156, Coût total : 1182
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150   6   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -6   *   *   *   *   6   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -6   *   *   *   6
+t    *   *   *  -70  -80  -6   *
+Max flow: 1182
+
+
+* Itération 157 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 7, Flot total : 157, Coût total : 1194
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150   7   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -7   *   *   *   *   7   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -7   *   *   *   7
+t    *   *   *  -70  -80  -7   *
+Max flow: 1194
+
+
+* Itération 158 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 8, Flot total : 158, Coût total : 1206
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150   8   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -8   *   *   *   *   8   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -8   *   *   *   8
+t    *   *   *  -70  -80  -8   *
+Max flow: 1206
+
+
+* Itération 159 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 9, Flot total : 159, Coût total : 1218
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150   9   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -9   *   *   *   *   9   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -9   *   *   *   9
+t    *   *   *  -70  -80  -9   *
+Max flow: 1218
+
+
+* Itération 160 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 10, Flot total : 160, Coût total : 1230
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  10   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -10   *   *   *   *  10   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -10   *   *   *  10
+t    *   *   *  -70  -80  -10   *
+Max flow: 1230
+
+
+* Itération 161 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 11, Flot total : 161, Coût total : 1242
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  11   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -11   *   *   *   *  11   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -11   *   *   *  11
+t    *   *   *  -70  -80  -11   *
+Max flow: 1242
+
+
+* Itération 162 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 12, Flot total : 162, Coût total : 1254
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  12   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -12   *   *   *   *  12   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -12   *   *   *  12
+t    *   *   *  -70  -80  -12   *
+Max flow: 1254
+
+
+* Itération 163 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 13, Flot total : 163, Coût total : 1266
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  13   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -13   *   *   *   *  13   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -13   *   *   *  13
+t    *   *   *  -70  -80  -13   *
+Max flow: 1266
+
+
+* Itération 164 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 14, Flot total : 164, Coût total : 1278
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  14   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -14   *   *   *   *  14   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -14   *   *   *  14
+t    *   *   *  -70  -80  -14   *
+Max flow: 1278
+
+
+* Itération 165 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 15, Flot total : 165, Coût total : 1290
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  15   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -15   *   *   *   *  15   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -15   *   *   *  15
+t    *   *   *  -70  -80  -15   *
+Max flow: 1290
+
+
+* Itération 166 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 16, Flot total : 166, Coût total : 1302
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  16   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -16   *   *   *   *  16   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -16   *   *   *  16
+t    *   *   *  -70  -80  -16   *
+Max flow: 1302
+
+
+* Itération 167 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 17, Flot total : 167, Coût total : 1314
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  17   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -17   *   *   *   *  17   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -17   *   *   *  17
+t    *   *   *  -70  -80  -17   *
+Max flow: 1314
+
+
+* Itération 168 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 18, Flot total : 168, Coût total : 1326
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  18   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -18   *   *   *   *  18   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -18   *   *   *  18
+t    *   *   *  -70  -80  -18   *
+Max flow: 1326
+
+
+* Itération 169 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 19, Flot total : 169, Coût total : 1338
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  19   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -19   *   *   *   *  19   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -19   *   *   *  19
+t    *   *   *  -70  -80  -19   *
+Max flow: 1338
+
+
+* Itération 170 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 20, Flot total : 170, Coût total : 1350
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  20   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -20   *   *   *   *  20   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -20   *   *   *  20
+t    *   *   *  -70  -80  -20   *
+Max flow: 1350
+
+
+* Itération 171 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 21, Flot total : 171, Coût total : 1362
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  21   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -21   *   *   *   *  21   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -21   *   *   *  21
+t    *   *   *  -70  -80  -21   *
+Max flow: 1362
+
+
+* Itération 172 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 22, Flot total : 172, Coût total : 1374
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  22   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -22   *   *   *   *  22   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -22   *   *   *  22
+t    *   *   *  -70  -80  -22   *
+Max flow: 1374
+
+
+* Itération 173 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 23, Flot total : 173, Coût total : 1386
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  23   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -23   *   *   *   *  23   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -23   *   *   *  23
+t    *   *   *  -70  -80  -23   *
+Max flow: 1386
+
+
+* Itération 174 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 24, Flot total : 174, Coût total : 1398
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  24   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -24   *   *   *   *  24   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -24   *   *   *  24
+t    *   *   *  -70  -80  -24   *
+Max flow: 1398
+
+
+* Itération 175 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 25, Flot total : 175, Coût total : 1410
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  25   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -25   *   *   *   *  25   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -25   *   *   *  25
+t    *   *   *  -70  -80  -25   *
+Max flow: 1410
+
+
+* Itération 176 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 26, Flot total : 176, Coût total : 1422
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  26   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -26   *   *   *   *  26   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -26   *   *   *  26
+t    *   *   *  -70  -80  -26   *
+Max flow: 1422
+
+
+* Itération 177 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 27, Flot total : 177, Coût total : 1434
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  27   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -27   *   *   *   *  27   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -27   *   *   *  27
+t    *   *   *  -70  -80  -27   *
+Max flow: 1434
+
+
+* Itération 178 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 28, Flot total : 178, Coût total : 1446
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  28   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -28   *   *   *   *  28   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -28   *   *   *  28
+t    *   *   *  -70  -80  -28   *
+Max flow: 1446
+
+
+* Itération 179 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 29, Flot total : 179, Coût total : 1458
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  29   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -29   *   *   *   *  29   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -29   *   *   *  29
+t    *   *   *  -70  -80  -29   *
+Max flow: 1458
+
+
+* Itération 180 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 30, Flot total : 180, Coût total : 1470
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  30   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -30   *   *   *   *  30   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -30   *   *   *  30
+t    *   *   *  -70  -80  -30   *
+Max flow: 1470
+
+
+* Itération 181 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 31, Flot total : 181, Coût total : 1482
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  31   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -31   *   *   *   *  31   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -31   *   *   *  31
+t    *   *   *  -70  -80  -31   *
+Max flow: 1482
+
+
+* Itération 182 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 32, Flot total : 182, Coût total : 1494
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  32   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -32   *   *   *   *  32   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -32   *   *   *  32
+t    *   *   *  -70  -80  -32   *
+Max flow: 1494
+
+
+* Itération 183 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 33, Flot total : 183, Coût total : 1506
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  33   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -33   *   *   *   *  33   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -33   *   *   *  33
+t    *   *   *  -70  -80  -33   *
+Max flow: 1506
+
+
+* Itération 184 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 34, Flot total : 184, Coût total : 1518
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  34   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -34   *   *   *   *  34   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -34   *   *   *  34
+t    *   *   *  -70  -80  -34   *
+Max flow: 1518
+
+
+* Itération 185 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 35, Flot total : 185, Coût total : 1530
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  35   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -35   *   *   *   *  35   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -35   *   *   *  35
+t    *   *   *  -70  -80  -35   *
+Max flow: 1530
+
+
+* Itération 186 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 36, Flot total : 186, Coût total : 1542
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  36   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -36   *   *   *   *  36   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -36   *   *   *  36
+t    *   *   *  -70  -80  -36   *
+Max flow: 1542
+
+
+* Itération 187 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 37, Flot total : 187, Coût total : 1554
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  37   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -37   *   *   *   *  37   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -37   *   *   *  37
+t    *   *   *  -70  -80  -37   *
+Max flow: 1554
+
+
+* Itération 188 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 38, Flot total : 188, Coût total : 1566
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  38   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -38   *   *   *   *  38   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -38   *   *   *  38
+t    *   *   *  -70  -80  -38   *
+Max flow: 1566
+
+
+* Itération 189 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 39, Flot total : 189, Coût total : 1578
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  39   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -39   *   *   *   *  39   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -39   *   *   *  39
+t    *   *   *  -70  -80  -39   *
+Max flow: 1578
+
+
+* Itération 190 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 40, Flot total : 190, Coût total : 1590
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  40   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -40   *   *   *   *  40   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -40   *   *   *  40
+t    *   *   *  -70  -80  -40   *
+Max flow: 1590
+
+
+* Itération 191 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 41, Flot total : 191, Coût total : 1602
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  41   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -41   *   *   *   *  41   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -41   *   *   *  41
+t    *   *   *  -70  -80  -41   *
+Max flow: 1602
+
+
+* Itération 192 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 42, Flot total : 192, Coût total : 1614
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  42   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -42   *   *   *   *  42   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -42   *   *   *  42
+t    *   *   *  -70  -80  -42   *
+Max flow: 1614
+
+
+* Itération 193 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 43, Flot total : 193, Coût total : 1626
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  43   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -43   *   *   *   *  43   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -43   *   *   *  43
+t    *   *   *  -70  -80  -43   *
+Max flow: 1626
+
+
+* Itération 194 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 44, Flot total : 194, Coût total : 1638
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  44   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -44   *   *   *   *  44   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -44   *   *   *  44
+t    *   *   *  -70  -80  -44   *
+Max flow: 1638
+
+
+* Itération 195 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 45, Flot total : 195, Coût total : 1650
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  45   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -45   *   *   *   *  45   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -45   *   *   *  45
+t    *   *   *  -70  -80  -45   *
+Max flow: 1650
+
+
+* Itération 196 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 46, Flot total : 196, Coût total : 1662
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  46   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -46   *   *   *   *  46   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -46   *   *   *  46
+t    *   *   *  -70  -80  -46   *
+Max flow: 1662
+
+
+* Itération 197 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 47, Flot total : 197, Coût total : 1674
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  47   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -47   *   *   *   *  47   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -47   *   *   *  47
+t    *   *   *  -70  -80  -47   *
+Max flow: 1674
+
+
+* Itération 198 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 48, Flot total : 198, Coût total : 1686
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  48   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -48   *   *   *   *  48   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -48   *   *   *  48
+t    *   *   *  -70  -80  -48   *
+Max flow: 1686
+
+
+* Itération 199 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 49, Flot total : 199, Coût total : 1698
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  49   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -49   *   *   *   *  49   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -49   *   *   *  49
+t    *   *   *  -70  -80  -49   *
+Max flow: 1698
+
+
+* Itération 200 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 50, Flot total : 200, Coût total : 1710
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  50   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -50   *   *   *   *  50   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -50   *   *   *  50
+t    *   *   *  -70  -80  -50   *
+Max flow: 1710
+
+
+* Itération 201 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 51, Flot total : 201, Coût total : 1722
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  51   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -51   *   *   *   *  51   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -51   *   *   *  51
+t    *   *   *  -70  -80  -51   *
+Max flow: 1722
+
+
+* Itération 202 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 52, Flot total : 202, Coût total : 1734
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  52   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -52   *   *   *   *  52   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -52   *   *   *  52
+t    *   *   *  -70  -80  -52   *
+Max flow: 1734
+
+
+* Itération 203 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 53, Flot total : 203, Coût total : 1746
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  53   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -53   *   *   *   *  53   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -53   *   *   *  53
+t    *   *   *  -70  -80  -53   *
+Max flow: 1746
+
+
+* Itération 204 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 54, Flot total : 204, Coût total : 1758
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  54   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -54   *   *   *   *  54   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -54   *   *   *  54
+t    *   *   *  -70  -80  -54   *
+Max flow: 1758
+
+
+* Itération 205 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 55, Flot total : 205, Coût total : 1770
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  55   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -55   *   *   *   *  55   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -55   *   *   *  55
+t    *   *   *  -70  -80  -55   *
+Max flow: 1770
+
+
+* Itération 206 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 56, Flot total : 206, Coût total : 1782
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  56   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -56   *   *   *   *  56   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -56   *   *   *  56
+t    *   *   *  -70  -80  -56   *
+Max flow: 1782
+
+
+* Itération 207 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 57, Flot total : 207, Coût total : 1794
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  57   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -57   *   *   *   *  57   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -57   *   *   *  57
+t    *   *   *  -70  -80  -57   *
+Max flow: 1794
+
+
+* Itération 208 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 58, Flot total : 208, Coût total : 1806
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  58   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -58   *   *   *   *  58   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -58   *   *   *  58
+t    *   *   *  -70  -80  -58   *
+Max flow: 1806
+
+
+* Itération 209 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 59, Flot total : 209, Coût total : 1818
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  59   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -59   *   *   *   *  59   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -59   *   *   *  59
+t    *   *   *  -70  -80  -59   *
+Max flow: 1818
+
+
+* Itération 210 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 60, Flot total : 210, Coût total : 1830
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  60   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -60   *   *   *   *  60   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -60   *   *   *  60
+t    *   *   *  -70  -80  -60   *
+Max flow: 1830
+
+
+* Itération 211 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 61, Flot total : 211, Coût total : 1842
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  61   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -61   *   *   *   *  61   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -61   *   *   *  61
+t    *   *   *  -70  -80  -61   *
+Max flow: 1842
+
+
+* Itération 212 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 62, Flot total : 212, Coût total : 1854
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  62   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -62   *   *   *   *  62   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -62   *   *   *  62
+t    *   *   *  -70  -80  -62   *
+Max flow: 1854
+
+
+* Itération 213 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 63, Flot total : 213, Coût total : 1866
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  63   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -63   *   *   *   *  63   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -63   *   *   *  63
+t    *   *   *  -70  -80  -63   *
+Max flow: 1866
+
+
+* Itération 214 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 64, Flot total : 214, Coût total : 1878
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  64   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -64   *   *   *   *  64   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -64   *   *   *  64
+t    *   *   *  -70  -80  -64   *
+Max flow: 1878
+
+
+* Itération 215 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 65, Flot total : 215, Coût total : 1890
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  65   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -65   *   *   *   *  65   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -65   *   *   *  65
+t    *   *   *  -70  -80  -65   *
+Max flow: 1890
+
+
+* Itération 216 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 66, Flot total : 216, Coût total : 1902
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  66   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -66   *   *   *   *  66   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -66   *   *   *  66
+t    *   *   *  -70  -80  -66   *
+Max flow: 1902
+
+
+* Itération 217 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 67, Flot total : 217, Coût total : 1914
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  67   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -67   *   *   *   *  67   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -67   *   *   *  67
+t    *   *   *  -70  -80  -67   *
+Max flow: 1914
+
+
+* Itération 218 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 68, Flot total : 218, Coût total : 1926
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  68   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -68   *   *   *   *  68   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -68   *   *   *  68
+t    *   *   *  -70  -80  -68   *
+Max flow: 1926
+
+
+* Itération 219 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 69, Flot total : 219, Coût total : 1938
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  69   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -69   *   *   *   *  69   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -69   *   *   *  69
+t    *   *   *  -70  -80  -69   *
+Max flow: 1938
+
+
+* Itération 220 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 70, Flot total : 220, Coût total : 1950
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  70   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -70   *   *   *   *  70   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -70   *   *   *  70
+t    *   *   *  -70  -80  -70   *
+Max flow: 1950
+
+
+* Itération 221 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 71, Flot total : 221, Coût total : 1962
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  71   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -71   *   *   *   *  71   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -71   *   *   *  71
+t    *   *   *  -70  -80  -71   *
+Max flow: 1962
+
+
+* Itération 222 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 72, Flot total : 222, Coût total : 1974
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  72   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -72   *   *   *   *  72   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -72   *   *   *  72
+t    *   *   *  -70  -80  -72   *
+Max flow: 1974
+
+
+* Itération 223 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 73, Flot total : 223, Coût total : 1986
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  73   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -73   *   *   *   *  73   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -73   *   *   *  73
+t    *   *   *  -70  -80  -73   *
+Max flow: 1986
+
+
+* Itération 224 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 74, Flot total : 224, Coût total : 1998
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  74   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -74   *   *   *   *  74   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -74   *   *   *  74
+t    *   *   *  -70  -80  -74   *
+Max flow: 1998
+
+
+* Itération 225 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 75, Flot total : 225, Coût total : 2010
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  75   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -75   *   *   *   *  75   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -75   *   *   *  75
+t    *   *   *  -70  -80  -75   *
+Max flow: 2010
+
+
+* Itération 226 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 76, Flot total : 226, Coût total : 2022
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  76   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -76   *   *   *   *  76   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -76   *   *   *  76
+t    *   *   *  -70  -80  -76   *
+Max flow: 2022
+
+
+* Itération 227 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 77, Flot total : 227, Coût total : 2034
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  77   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -77   *   *   *   *  77   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -77   *   *   *  77
+t    *   *   *  -70  -80  -77   *
+Max flow: 2034
+
+
+* Itération 228 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 78, Flot total : 228, Coût total : 2046
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  78   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -78   *   *   *   *  78   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -78   *   *   *  78
+t    *   *   *  -70  -80  -78   *
+Max flow: 2046
+
+
+* Itération 229 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 79, Flot total : 229, Coût total : 2058
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  79   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -79   *   *   *   *  79   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -79   *   *   *  79
+t    *   *   *  -70  -80  -79   *
+Max flow: 2058
+
+
+* Itération 230 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 80, Flot total : 230, Coût total : 2070
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  80   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -80   *   *   *   *  80   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -80   *   *   *  80
+t    *   *   *  -70  -80  -80   *
+Max flow: 2070
+
+
+* Itération 231 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 81, Flot total : 231, Coût total : 2082
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  81   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -81   *   *   *   *  81   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -81   *   *   *  81
+t    *   *   *  -70  -80  -81   *
+Max flow: 2082
+
+
+* Itération 232 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 82, Flot total : 232, Coût total : 2094
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  82   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -82   *   *   *   *  82   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -82   *   *   *  82
+t    *   *   *  -70  -80  -82   *
+Max flow: 2094
+
+
+* Itération 233 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 83, Flot total : 233, Coût total : 2106
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  83   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -83   *   *   *   *  83   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -83   *   *   *  83
+t    *   *   *  -70  -80  -83   *
+Max flow: 2106
+
+
+* Itération 234 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 84, Flot total : 234, Coût total : 2118
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  84   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -84   *   *   *   *  84   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -84   *   *   *  84
+t    *   *   *  -70  -80  -84   *
+Max flow: 2118
+
+
+* Itération 235 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 85, Flot total : 235, Coût total : 2130
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  85   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -85   *   *   *   *  85   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -85   *   *   *  85
+t    *   *   *  -70  -80  -85   *
+Max flow: 2130
+
+
+* Itération 236 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 86, Flot total : 236, Coût total : 2142
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  86   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -86   *   *   *   *  86   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -86   *   *   *  86
+t    *   *   *  -70  -80  -86   *
+Max flow: 2142
+
+
+* Itération 237 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 87, Flot total : 237, Coût total : 2154
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  87   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -87   *   *   *   *  87   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -87   *   *   *  87
+t    *   *   *  -70  -80  -87   *
+Max flow: 2154
+
+
+* Itération 238 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 88, Flot total : 238, Coût total : 2166
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  88   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -88   *   *   *   *  88   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -88   *   *   *  88
+t    *   *   *  -70  -80  -88   *
+Max flow: 2166
+
+
+* Itération 239 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 89, Flot total : 239, Coût total : 2178
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  89   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -89   *   *   *   *  89   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -89   *   *   *  89
+t    *   *   *  -70  -80  -89   *
+Max flow: 2178
+
+
+* Itération 240 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 90, Flot total : 240, Coût total : 2190
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  90   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -90   *   *   *   *  90   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -90   *   *   *  90
+t    *   *   *  -70  -80  -90   *
+Max flow: 2190
+
+
+* Itération 241 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 91, Flot total : 241, Coût total : 2202
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  91   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -91   *   *   *   *  91   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -91   *   *   *  91
+t    *   *   *  -70  -80  -91   *
+Max flow: 2202
+
+
+* Itération 242 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 92, Flot total : 242, Coût total : 2214
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  92   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -92   *   *   *   *  92   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -92   *   *   *  92
+t    *   *   *  -70  -80  -92   *
+Max flow: 2214
+
+
+* Itération 243 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 93, Flot total : 243, Coût total : 2226
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  93   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -93   *   *   *   *  93   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -93   *   *   *  93
+t    *   *   *  -70  -80  -93   *
+Max flow: 2226
+
+
+* Itération 244 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 94, Flot total : 244, Coût total : 2238
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  94   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -94   *   *   *   *  94   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -94   *   *   *  94
+t    *   *   *  -70  -80  -94   *
+Max flow: 2238
+
+
+* Itération 245 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 95, Flot total : 245, Coût total : 2250
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  95   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -95   *   *   *   *  95   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -95   *   *   *  95
+t    *   *   *  -70  -80  -95   *
+Max flow: 2250
+
+
+* Itération 246 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 96, Flot total : 246, Coût total : 2262
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  96   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -96   *   *   *   *  96   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -96   *   *   *  96
+t    *   *   *  -70  -80  -96   *
+Max flow: 2262
+
+
+* Itération 247 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 97, Flot total : 247, Coût total : 2274
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  97   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -97   *   *   *   *  97   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -97   *   *   *  97
+t    *   *   *  -70  -80  -97   *
+Max flow: 2274
+
+
+* Itération 248 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 98, Flot total : 248, Coût total : 2286
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  98   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -98   *   *   *   *  98   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -98   *   *   *  98
+t    *   *   *  -70  -80  -98   *
+Max flow: 2286
+
+
+* Itération 249 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 99, Flot total : 249, Coût total : 2298
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  99   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -99   *   *   *   *  99   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -99   *   *   *  99
+t    *   *   *  -70  -80  -99   *
+Max flow: 2298
+
+
+* Itération 250 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 100, Flot total : 250, Coût total : 2310
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  100   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -100   *   *   *   *  100   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -100   *   *   *  100
+t    *   *   *  -70  -80  -100   *
+Max flow: 2310
+
+
+* Itération 251 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 101, Flot total : 251, Coût total : 2322
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  101   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -101   *   *   *   *  101   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -101   *   *   *  101
+t    *   *   *  -70  -80  -101   *
+Max flow: 2322
+
+
+* Itération 252 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 102, Flot total : 252, Coût total : 2334
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  102   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -102   *   *   *   *  102   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -102   *   *   *  102
+t    *   *   *  -70  -80  -102   *
+Max flow: 2334
+
+
+* Itération 253 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 103, Flot total : 253, Coût total : 2346
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  103   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -103   *   *   *   *  103   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -103   *   *   *  103
+t    *   *   *  -70  -80  -103   *
+Max flow: 2346
+
+
+* Itération 254 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 104, Flot total : 254, Coût total : 2358
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  104   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -104   *   *   *   *  104   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -104   *   *   *  104
+t    *   *   *  -70  -80  -104   *
+Max flow: 2358
+
+
+* Itération 255 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 105, Flot total : 255, Coût total : 2370
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  105   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -105   *   *   *   *  105   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -105   *   *   *  105
+t    *   *   *  -70  -80  -105   *
+Max flow: 2370
+
+
+* Itération 256 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 106, Flot total : 256, Coût total : 2382
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  106   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -106   *   *   *   *  106   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -106   *   *   *  106
+t    *   *   *  -70  -80  -106   *
+Max flow: 2382
+
+
+* Itération 257 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 107, Flot total : 257, Coût total : 2394
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  107   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -107   *   *   *   *  107   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -107   *   *   *  107
+t    *   *   *  -70  -80  -107   *
+Max flow: 2394
+
+
+* Itération 258 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 108, Flot total : 258, Coût total : 2406
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  108   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -108   *   *   *   *  108   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -108   *   *   *  108
+t    *   *   *  -70  -80  -108   *
+Max flow: 2406
+
+
+* Itération 259 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 109, Flot total : 259, Coût total : 2418
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  109   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -109   *   *   *   *  109   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -109   *   *   *  109
+t    *   *   *  -70  -80  -109   *
+Max flow: 2418
+
+
+* Itération 260 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 110, Flot total : 260, Coût total : 2430
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  110   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -110   *   *   *   *  110   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -110   *   *   *  110
+t    *   *   *  -70  -80  -110   *
+Max flow: 2430
+
+
+* Itération 261 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 111, Flot total : 261, Coût total : 2442
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  111   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -111   *   *   *   *  111   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -111   *   *   *  111
+t    *   *   *  -70  -80  -111   *
+Max flow: 2442
+
+
+* Itération 262 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 112, Flot total : 262, Coût total : 2454
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  112   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -112   *   *   *   *  112   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -112   *   *   *  112
+t    *   *   *  -70  -80  -112   *
+Max flow: 2454
+
+
+* Itération 263 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 113, Flot total : 263, Coût total : 2466
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  113   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -113   *   *   *   *  113   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -113   *   *   *  113
+t    *   *   *  -70  -80  -113   *
+Max flow: 2466
+
+
+* Itération 264 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 114, Flot total : 264, Coût total : 2478
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  114   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -114   *   *   *   *  114   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -114   *   *   *  114
+t    *   *   *  -70  -80  -114   *
+Max flow: 2478
+
+
+* Itération 265 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 115, Flot total : 265, Coût total : 2490
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  115   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -115   *   *   *   *  115   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -115   *   *   *  115
+t    *   *   *  -70  -80  -115   *
+Max flow: 2490
+
+
+* Itération 266 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 116, Flot total : 266, Coût total : 2502
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  116   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -116   *   *   *   *  116   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -116   *   *   *  116
+t    *   *   *  -70  -80  -116   *
+Max flow: 2502
+
+
+* Itération 267 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 117, Flot total : 267, Coût total : 2514
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  117   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -117   *   *   *   *  117   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -117   *   *   *  117
+t    *   *   *  -70  -80  -117   *
+Max flow: 2514
+
+
+* Itération 268 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 118, Flot total : 268, Coût total : 2526
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  118   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -118   *   *   *   *  118   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -118   *   *   *  118
+t    *   *   *  -70  -80  -118   *
+Max flow: 2526
+
+
+* Itération 269 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 119, Flot total : 269, Coût total : 2538
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  119   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -119   *   *   *   *  119   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -119   *   *   *  119
+t    *   *   *  -70  -80  -119   *
+Max flow: 2538
+
+
+* Itération 270 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 120, Flot total : 270, Coût total : 2550
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  120   *   *   *   *
+a   -150   *   *  70  80   *   *
+b   -120   *   *   *   *  120   *
+c    *  -70   *   *   *   *  70
+d    *  -80   *   *   *   *  80
+e    *   *  -120   *   *   *  120
+t    *   *   *  -70  -80  -120   *
+Max flow: 2550
+
+
+* Itération 271 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 120, Flot total : 270, Coût total : 2550
+Flot ajouté : 1, Flot total : 271, Coût total : 2562
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  121   *   *   *   *
+a   -150   *   *  71  79   *   *
+b   -121   *   *   *   1  120   *
+c    *  -71   *   *   *   *  71
+d    *  -79  -1   *   *   *  80
+e    *   *  -120   *   *   *  120
+t    *   *   *  -71  -80  -120   *
+Max flow: 2562
+
+
+* Itération 272 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 120, Flot total : 270, Coût total : 2550
+Flot ajouté : 2, Flot total : 272, Coût total : 2574
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  122   *   *   *   *
+a   -150   *   *  72  78   *   *
+b   -122   *   *   *   2  120   *
+c    *  -72   *   *   *   *  72
+d    *  -78  -2   *   *   *  80
+e    *   *  -120   *   *   *  120
+t    *   *   *  -72  -80  -120   *
+Max flow: 2574
+
+
+* Itération 273 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 120, Flot total : 270, Coût total : 2550
+Flot ajouté : 3, Flot total : 273, Coût total : 2586
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  123   *   *   *   *
+a   -150   *   *  73  77   *   *
+b   -123   *   *   *   3  120   *
+c    *  -73   *   *   *   *  73
+d    *  -77  -3   *   *   *  80
+e    *   *  -120   *   *   *  120
+t    *   *   *  -73  -80  -120   *
+Max flow: 2586
+
+
+* Itération 274 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 120, Flot total : 270, Coût total : 2550
+Flot ajouté : 4, Flot total : 274, Coût total : 2598
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  124   *   *   *   *
+a   -150   *   *  74  76   *   *
+b   -124   *   *   *   4  120   *
+c    *  -74   *   *   *   *  74
+d    *  -76  -4   *   *   *  80
+e    *   *  -120   *   *   *  120
+t    *   *   *  -74  -80  -120   *
+Max flow: 2598
+
+
+* Itération 275 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 120, Flot total : 270, Coût total : 2550
+Flot ajouté : 5, Flot total : 275, Coût total : 2610
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  125   *   *   *   *
+a   -150   *   *  75  75   *   *
+b   -125   *   *   *   5  120   *
+c    *  -75   *   *   *   *  75
+d    *  -75  -5   *   *   *  80
+e    *   *  -120   *   *   *  120
+t    *   *   *  -75  -80  -120   *
+Max flow: 2610
+
+
+* Itération 276 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 120, Flot total : 270, Coût total : 2550
+Flot ajouté : 6, Flot total : 276, Coût total : 2622
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  126   *   *   *   *
+a   -150   *   *  76  74   *   *
+b   -126   *   *   *   6  120   *
+c    *  -76   *   *   *   *  76
+d    *  -74  -6   *   *   *  80
+e    *   *  -120   *   *   *  120
+t    *   *   *  -76  -80  -120   *
+Max flow: 2622
+
+
+* Itération 277 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 120, Flot total : 270, Coût total : 2550
+Flot ajouté : 7, Flot total : 277, Coût total : 2634
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  127   *   *   *   *
+a   -150   *   *  77  73   *   *
+b   -127   *   *   *   7  120   *
+c    *  -77   *   *   *   *  77
+d    *  -73  -7   *   *   *  80
+e    *   *  -120   *   *   *  120
+t    *   *   *  -77  -80  -120   *
+Max flow: 2634
+
+
+* Itération 278 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 120, Flot total : 270, Coût total : 2550
+Flot ajouté : 8, Flot total : 278, Coût total : 2646
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  128   *   *   *   *
+a   -150   *   *  78  72   *   *
+b   -128   *   *   *   8  120   *
+c    *  -78   *   *   *   *  78
+d    *  -72  -8   *   *   *  80
+e    *   *  -120   *   *   *  120
+t    *   *   *  -78  -80  -120   *
+Max flow: 2646
+
+
+* Itération 279 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 120, Flot total : 270, Coût total : 2550
+Flot ajouté : 9, Flot total : 279, Coût total : 2658
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  129   *   *   *   *
+a   -150   *   *  79  71   *   *
+b   -129   *   *   *   9  120   *
+c    *  -79   *   *   *   *  79
+d    *  -71  -9   *   *   *  80
+e    *   *  -120   *   *   *  120
+t    *   *   *  -79  -80  -120   *
+Max flow: 2658
+
+
+* Itération 280 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 120, Flot total : 270, Coût total : 2550
+Flot ajouté : 10, Flot total : 280, Coût total : 2670
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  130   *   *   *   *
+a   -150   *   *  80  70   *   *
+b   -130   *   *   *  10  120   *
+c    *  -80   *   *   *   *  80
+d    *  -70  -10   *   *   *  80
+e    *   *  -120   *   *   *  120
+t    *   *   *  -80  -80  -120   *
+Max flow: 2670
+
+
+* Itération 281 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 120, Flot total : 270, Coût total : 2550
+Flot ajouté : 11, Flot total : 281, Coût total : 2682
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  131   *   *   *   *
+a   -150   *   *  81  69   *   *
+b   -131   *   *   *  11  120   *
+c    *  -81   *   *   *   *  81
+d    *  -69  -11   *   *   *  80
+e    *   *  -120   *   *   *  120
+t    *   *   *  -81  -80  -120   *
+Max flow: 2682
+
+
+* Itération 282 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 120, Flot total : 270, Coût total : 2550
+Flot ajouté : 12, Flot total : 282, Coût total : 2694
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  132   *   *   *   *
+a   -150   *   *  82  68   *   *
+b   -132   *   *   *  12  120   *
+c    *  -82   *   *   *   *  82
+d    *  -68  -12   *   *   *  80
+e    *   *  -120   *   *   *  120
+t    *   *   *  -82  -80  -120   *
+Max flow: 2694
+
+
+* Itération 283 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 120, Flot total : 270, Coût total : 2550
+Flot ajouté : 13, Flot total : 283, Coût total : 2706
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  133   *   *   *   *
+a   -150   *   *  83  67   *   *
+b   -133   *   *   *  13  120   *
+c    *  -83   *   *   *   *  83
+d    *  -67  -13   *   *   *  80
+e    *   *  -120   *   *   *  120
+t    *   *   *  -83  -80  -120   *
+Max flow: 2706
+
+
+* Itération 284 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 120, Flot total : 270, Coût total : 2550
+Flot ajouté : 14, Flot total : 284, Coût total : 2718
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  134   *   *   *   *
+a   -150   *   *  84  66   *   *
+b   -134   *   *   *  14  120   *
+c    *  -84   *   *   *   *  84
+d    *  -66  -14   *   *   *  80
+e    *   *  -120   *   *   *  120
+t    *   *   *  -84  -80  -120   *
+Max flow: 2718
+
+
+* Itération 285 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 120, Flot total : 270, Coût total : 2550
+Flot ajouté : 15, Flot total : 285, Coût total : 2730
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  135   *   *   *   *
+a   -150   *   *  85  65   *   *
+b   -135   *   *   *  15  120   *
+c    *  -85   *   *   *   *  85
+d    *  -65  -15   *   *   *  80
+e    *   *  -120   *   *   *  120
+t    *   *   *  -85  -80  -120   *
+Max flow: 2730
+
+
+* Itération 286 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 120, Flot total : 270, Coût total : 2550
+Flot ajouté : 16, Flot total : 286, Coût total : 2742
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  136   *   *   *   *
+a   -150   *   *  86  64   *   *
+b   -136   *   *   *  16  120   *
+c    *  -86   *   *   *   *  86
+d    *  -64  -16   *   *   *  80
+e    *   *  -120   *   *   *  120
+t    *   *   *  -86  -80  -120   *
+Max flow: 2742
+
+
+* Itération 287 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 120, Flot total : 270, Coût total : 2550
+Flot ajouté : 17, Flot total : 287, Coût total : 2754
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  137   *   *   *   *
+a   -150   *   *  87  63   *   *
+b   -137   *   *   *  17  120   *
+c    *  -87   *   *   *   *  87
+d    *  -63  -17   *   *   *  80
+e    *   *  -120   *   *   *  120
+t    *   *   *  -87  -80  -120   *
+Max flow: 2754
+
+
+* Itération 288 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 120, Flot total : 270, Coût total : 2550
+Flot ajouté : 18, Flot total : 288, Coût total : 2766
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  138   *   *   *   *
+a   -150   *   *  88  62   *   *
+b   -138   *   *   *  18  120   *
+c    *  -88   *   *   *   *  88
+d    *  -62  -18   *   *   *  80
+e    *   *  -120   *   *   *  120
+t    *   *   *  -88  -80  -120   *
+Max flow: 2766
+
+
+* Itération 289 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 120, Flot total : 270, Coût total : 2550
+Flot ajouté : 19, Flot total : 289, Coût total : 2778
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  139   *   *   *   *
+a   -150   *   *  89  61   *   *
+b   -139   *   *   *  19  120   *
+c    *  -89   *   *   *   *  89
+d    *  -61  -19   *   *   *  80
+e    *   *  -120   *   *   *  120
+t    *   *   *  -89  -80  -120   *
+Max flow: 2778
+
+
+* Itération 290 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 120, Flot total : 270, Coût total : 2550
+Flot ajouté : 20, Flot total : 290, Coût total : 2790
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  140   *   *   *   *
+a   -150   *   *  90  60   *   *
+b   -140   *   *   *  20  120   *
+c    *  -90   *   *   *   *  90
+d    *  -60  -20   *   *   *  80
+e    *   *  -120   *   *   *  120
+t    *   *   *  -90  -80  -120   *
+Max flow: 2790
+
+
+* Itération 291 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 120, Flot total : 270, Coût total : 2550
+Flot ajouté : 21, Flot total : 291, Coût total : 2802
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  141   *   *   *   *
+a   -150   *   *  91  59   *   *
+b   -141   *   *   *  21  120   *
+c    *  -91   *   *   *   *  91
+d    *  -59  -21   *   *   *  80
+e    *   *  -120   *   *   *  120
+t    *   *   *  -91  -80  -120   *
+Max flow: 2802
+
+
+* Itération 292 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 120, Flot total : 270, Coût total : 2550
+Flot ajouté : 22, Flot total : 292, Coût total : 2814
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  142   *   *   *   *
+a   -150   *   *  92  58   *   *
+b   -142   *   *   *  22  120   *
+c    *  -92   *   *   *   *  92
+d    *  -58  -22   *   *   *  80
+e    *   *  -120   *   *   *  120
+t    *   *   *  -92  -80  -120   *
+Max flow: 2814
+
+
+* Itération 293 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 120, Flot total : 270, Coût total : 2550
+Flot ajouté : 23, Flot total : 293, Coût total : 2826
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  143   *   *   *   *
+a   -150   *   *  93  57   *   *
+b   -143   *   *   *  23  120   *
+c    *  -93   *   *   *   *  93
+d    *  -57  -23   *   *   *  80
+e    *   *  -120   *   *   *  120
+t    *   *   *  -93  -80  -120   *
+Max flow: 2826
+
+
+* Itération 294 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 120, Flot total : 270, Coût total : 2550
+Flot ajouté : 24, Flot total : 294, Coût total : 2838
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  144   *   *   *   *
+a   -150   *   *  94  56   *   *
+b   -144   *   *   *  24  120   *
+c    *  -94   *   *   *   *  94
+d    *  -56  -24   *   *   *  80
+e    *   *  -120   *   *   *  120
+t    *   *   *  -94  -80  -120   *
+Max flow: 2838
+
+
+* Itération 295 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 120, Flot total : 270, Coût total : 2550
+Flot ajouté : 25, Flot total : 295, Coût total : 2850
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  145   *   *   *   *
+a   -150   *   *  95  55   *   *
+b   -145   *   *   *  25  120   *
+c    *  -95   *   *   *   *  95
+d    *  -55  -25   *   *   *  80
+e    *   *  -120   *   *   *  120
+t    *   *   *  -95  -80  -120   *
+Max flow: 2850
+
+
+* Itération 296 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 120, Flot total : 270, Coût total : 2550
+Flot ajouté : 26, Flot total : 296, Coût total : 2862
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  146   *   *   *   *
+a   -150   *   *  96  54   *   *
+b   -146   *   *   *  26  120   *
+c    *  -96   *   *   *   *  96
+d    *  -54  -26   *   *   *  80
+e    *   *  -120   *   *   *  120
+t    *   *   *  -96  -80  -120   *
+Max flow: 2862
+
+
+* Itération 297 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 120, Flot total : 270, Coût total : 2550
+Flot ajouté : 27, Flot total : 297, Coût total : 2874
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  147   *   *   *   *
+a   -150   *   *  97  53   *   *
+b   -147   *   *   *  27  120   *
+c    *  -97   *   *   *   *  97
+d    *  -53  -27   *   *   *  80
+e    *   *  -120   *   *   *  120
+t    *   *   *  -97  -80  -120   *
+Max flow: 2874
+
+
+* Itération 298 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 120, Flot total : 270, Coût total : 2550
+Flot ajouté : 28, Flot total : 298, Coût total : 2886
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  148   *   *   *   *
+a   -150   *   *  98  52   *   *
+b   -148   *   *   *  28  120   *
+c    *  -98   *   *   *   *  98
+d    *  -52  -28   *   *   *  80
+e    *   *  -120   *   *   *  120
+t    *   *   *  -98  -80  -120   *
+Max flow: 2886
+
+
+* Itération 299 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 120, Flot total : 270, Coût total : 2550
+Flot ajouté : 29, Flot total : 299, Coût total : 2898
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  149   *   *   *   *
+a   -150   *   *  99  51   *   *
+b   -149   *   *   *  29  120   *
+c    *  -99   *   *   *   *  99
+d    *  -51  -29   *   *   *  80
+e    *   *  -120   *   *   *  120
+t    *   *   *  -99  -80  -120   *
+Max flow: 2898
+
+
+* Itération 300 :
+Flot ajouté : 80, Flot total : 80, Coût total : 480
+Flot ajouté : 70, Flot total : 150, Coût total : 1110
+Flot ajouté : 120, Flot total : 270, Coût total : 2550
+Flot ajouté : 30, Flot total : 300, Coût total : 2910
+
+
+* Matrice des flots:
+
+     s   a   b   c   d   e   t
+s    *  150  150   *   *   *   *
+a   -150   *   *  100  50   *   *
+b   -150   *   *   *  30  120   *
+c    *  -100   *   *   *   *  100
+d    *  -50  -30   *   *   *  80
+e    *   *  -120   *   *   *  120
+t    *   *   *  -100  -80  -120   *
+Max flow: 2910

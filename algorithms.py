@@ -47,17 +47,6 @@ def ford_fulkerson(graph):
 
 
 def push_relabel(graph):
-    """
-    Push-Relabel algorithm for Maximum Flow problem.
-    
-    Args:
-        graph (FlowNetwork): The graph object.
-        source (int): Source vertex index.
-        sink (int): Sink vertex index.
-    
-    Returns:
-        int: Maximum flow from source to sink.
-    """
     n = graph.n
     source = 0
     sink = n - 1
@@ -77,9 +66,6 @@ def push_relabel(graph):
             excess[source] -= graph.capacity[source][v]
     
     def push(u, v):
-        """
-        Push flow from vertex u to vertex v.
-        """
         delta = min(excess[u], graph.capacity[u][v] - graph.flow[u][v])
         graph.flow[u][v] += delta
         graph.flow[v][u] -= delta
@@ -87,9 +73,6 @@ def push_relabel(graph):
         excess[v] += delta
     
     def relabel(u):
-        """
-        Relabel vertex u to allow pushing.
-        """
         min_height = float('Inf')
         for v in range(n):
             if graph.capacity[u][v] > graph.flow[u][v]:
@@ -97,9 +80,6 @@ def push_relabel(graph):
         height[u] = min_height + 1
 
     def discharge(u):
-        """
-        Discharge excess flow from vertex u.
-        """
         while excess[u] > 0:
             if seen[u] < n:  # Check next neighbor
                 v = seen[u]
@@ -125,20 +105,6 @@ def push_relabel(graph):
 
 
 def bellman_ford(residual, cost, source, n):
-    """
-    Bellman-Ford algorithm to find shortest paths in a graph.
-    
-    Args:
-        residual (list[list[int]]): Residual graph capacities.
-        cost (list[list[int]]): Edge costs for the graph.
-        source (int): Source vertex index.
-        n (int): Number of vertices.
-    
-    Returns:
-        tuple: (distances, predecessors) where:
-            distances (list[int]): Shortest path distances from the source.
-            predecessors (list[int]): Predecessor for each vertex on the shortest path.
-    """
     dist = [float('Inf')] * n
     pred = [-1] * n
     dist[source] = 0
@@ -153,20 +119,7 @@ def bellman_ford(residual, cost, source, n):
     # Check for negative cycles (optional, not required here)
     return dist, pred
 
-
 def min_cost_flow(graph, target_flow):
-    """
-    Minimum Cost Flow algorithm using Bellman-Ford to find augmenting paths.
-    
-    Args:
-        graph (FlowNetwork): The graph object.
-        source (int): Source vertex index.
-        sink (int): Sink vertex index.
-        target_flow (int): Target flow value.
-    
-    Returns:
-        int: Total cost of the flow.
-    """
     n = graph.n
     source = 0
     sink = n - 1
@@ -174,30 +127,56 @@ def min_cost_flow(graph, target_flow):
     flow = 0
 
     while flow < target_flow:
-        # Find shortest paths in the residual graph
+        # Trouver les plus courts chemins dans le graphe résiduel
         dist, pred = bellman_ford(graph.residual, graph.cost, source, n)
 
-        # If no path exists, break
+        # Vérifier si un cycle négatif est présent
+        for u in range(n):
+            for v in range(n):
+                if graph.residual[u][v] > 0 and dist[u] + graph.cost[u][v] < dist[v]:
+                    raise ValueError("Cycle négatif détecté dans le graphe.")
+
+        # Vérifier si un chemin est trouvable
         if dist[sink] == float('Inf'):
+            print("Aucun chemin disponible pour atteindre le flot cible.")
             break
 
-        # Find the maximum flow we can push through the augmenting path
+        # Trouver le flot maximum possible à pousser dans ce chemin
         path_flow = float('Inf')
         v = sink
         while v != source:
             u = pred[v]
+            if u == -1:
+                raise ValueError("Erreur dans les prédécesseurs : chemin invalide.")
             path_flow = min(path_flow, graph.residual[u][v])
             v = u
 
-        # Push flow along the augmenting path
+        # Limiter le flot pour ne pas dépasser le flot cible restant
+        path_flow = min(path_flow, target_flow - flow)
+
+        # Pousser le flot le long du chemin augmentant
         v = sink
         while v != source:
             u = pred[v]
+            # Mise à jour du graphe résiduel
             graph.residual[u][v] -= path_flow
             graph.residual[v][u] += path_flow
+
+            # Mise à jour de la matrice de flot
+            graph.flow[u][v] += path_flow
+            graph.flow[v][u] -= path_flow
+
+            # Mise à jour du coût total
             total_cost += path_flow * graph.cost[u][v]
             v = u
 
+        # Mettre à jour le flot total
         flow += path_flow
+        print(f"Flot ajouté : {path_flow}, Flot total : {flow}, Coût total : {total_cost}")
+
+    # Vérifier si le flot cible a été atteint
+    if flow < target_flow:
+        print("Impossible d'atteindre le flot cible avec les capacités actuelles.")
+        return None
 
     return total_cost
