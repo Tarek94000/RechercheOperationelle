@@ -1,6 +1,5 @@
 from graph import Graphique
 from algorithms import *
-from utils import *
 import copy
 
 def main():
@@ -73,6 +72,10 @@ def main():
                 except ValueError:
                     print("Entrée invalide. Veuillez entrer une valeur entière valide.")
             
+            print(graph, target_flow)
+            graph.display()
+            graph.display_flow()
+            print(graph.residual, graph.flow, graph.capacity)
             total_cost = min_cost_flow(graph, target_flow)
             print(f"\nCoût total du flot : {total_cost}")
             graph.display_flow()
