@@ -25,6 +25,7 @@ def main():
         try:
             graph = Graphique.read_graph(fichier)
             graph.display()
+            
         except FileNotFoundError:
             print("Le fichier spécifié est introuvable. Assurez-vous que le fichier existe.")
             return
@@ -47,17 +48,17 @@ def main():
                 else:
                     print("Veuillez entrer un numéro valide.")
             except ValueError:
-                print("Entrée invalide. Veuillez entrer un numéro valide (1-3).")
+                print("Entrée invalide. Veuillez entrer un numéro valide.")
 
         # Execute the chosen algorithm
         if choix_algo == 1:
             max_flow = ford_fulkerson(graph)
-            print(f"\nFlot maximal avec l'algorithme Ford-Fulkerson : {max_flow}")
             graph.display_flow()
+            print(f"\nFlot maximal avec l'algorithme Ford-Fulkerson : {max_flow}")
         elif choix_algo == 2:
             max_flow = push_relabel(graph)
-            print(f"\nFlot maximal avec l'algorithme Push-Relabel : {max_flow}")
             graph.display_flow()
+            print(f"\nFlot maximal avec l'algorithme Push-Relabel : {max_flow}")
         elif choix_algo == 3:
             copy_graph = copy.deepcopy(graph)
             max_flow = ford_fulkerson(copy_graph)
@@ -68,17 +69,14 @@ def main():
                     if target_flow > 0 and target_flow <= max_flow:
                         break
                     else:
-                        print("Veuillez entrer une valeur positive.")
+                        print("Veuillez entrer une valeur valide.")
                 except ValueError:
                     print("Entrée invalide. Veuillez entrer une valeur entière valide.")
             
-            print(graph, target_flow)
+            total_cost = min_cost_flow(graph, target_flow)
             graph.display()
             graph.display_flow()
-            print(graph.residual, graph.flow, graph.capacity)
-            total_cost = min_cost_flow(graph, target_flow)
             print(f"\nCoût total du flot : {total_cost}")
-            graph.display_flow()
 
 if __name__ == "__main__":
     main()
