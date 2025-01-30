@@ -1,210 +1,181 @@
 from collections import deque
 
 def bfs(residual, source, sink, parent):
-    n = len(residual)
+    n = len(residual)  # Nombre de sommets dans le graphe résiduel
     visited = [False] * n  # Liste pour suivre les sommets visités
-    queue = deque([source])  # File d'attente pour BFS, initialisée avec la source
-    visited[source] = True  # Marquer la source comme visitée
+    queue = deque([source])  # File d'attente pour la recherche en largeur, initialisée avec le sommet source
+    visited[source] = True  # Marquer le sommet source comme visité
 
-    while queue:
+    while queue:  # Tant que la file d'attente n'est pas vide
         u = queue.popleft()  # Extraire un sommet de la file d'attente
-        for v in range(n):
-            # Si le sommet v n'a pas été visité et qu'il y a une capacité résiduelle
-            if not visited[v] and residual[u][v] > 0:
+        for v in range(n):  # Parcourir tous les sommets adjacents
+            if not visited[v] and residual[u][v] > 0:  # Si le sommet n'a pas été visité et qu'il y a une capacité résiduelle
                 parent[v] = u  # Enregistrer le parent de v
-                visited[v] = True  # Marquer v comme visité
-                queue.append(v)  # Ajouter v à la file d'attente
-                if v == sink:
-                    return True  # Si le puits est atteint, retourner True
-    return False  # Si aucun chemin n'est trouvé, retourner False
+                visited[v] = True  # Marquer le sommet v comme visité
+                queue.append(v)  # Ajouter le sommet v à la file d'attente
+                if v == sink:  # Si le sommet v est le puits
+                    return True  # Chemin trouvé, retourner True
+    return False  # Aucun chemin trouvé, retourner False
 
 
 def ford_fulkerson(graph):
-    source = 0
-    sink = graph.n - 1
-    parent = [-1] * graph.n
-    max_flow = 0
+    source = 0  # Définir la source comme le premier sommet
+    sink = graph.n - 1  # Définir le puits comme le dernier sommet
+    parent = [-1] * graph.n  # Initialiser le tableau des parents pour stocker le chemin trouvé par BFS
+    max_flow = 0  # Initialiser le flot maximum à 0
 
-    # Tant qu'il y a un chemin augmentant du source au puits
-    while bfs(graph.residual, source, sink, parent):
-        path_flow = float('Inf')
-        v = sink
+    while bfs(graph.residual, source, sink, parent):  # Tant qu'il existe un chemin augmentant de la source au puits
+        path_flow = float('Inf')  # Initialiser le flot du chemin à l'infini
+        v = sink  # Commencer du puits
+        while v != source:  # Remonter le chemin trouvé par BFS
+            u = parent[v]  # Trouver le parent de v
+            path_flow = min(path_flow, graph.residual[u][v])  # Trouver la capacité résiduelle minimale le long du chemin
+            v = u  # Passer au sommet précédent
 
-        # Trouver le flot maximum à travers le chemin trouvé par BFS
-        while v != source:
-            u = parent[v]
-            path_flow = min(path_flow, graph.residual[u][v])
-            v = u
+        v = sink  # Recommencer du puits
+        while v != source:  # Remonter le chemin trouvé par BFS
+            u = parent[v]  # Trouver le parent de v
+            graph.residual[u][v] -= path_flow  # Réduire la capacité résiduelle le long du chemin
+            graph.residual[v][u] += path_flow  # Augmenter la capacité résiduelle dans la direction opposée
+            graph.flow[u][v] += path_flow  # Augmenter le flot le long du chemin
+            graph.flow[v][u] -= path_flow  # Réduire le flot dans la direction opposée
+            v = u  # Passer au sommet précédent
 
-        # Mettre à jour les capacités résiduelles des arêtes et des arêtes inverses le long du chemin
-        v = sink
-        while v != source:
-            u = parent[v]
-            graph.residual[u][v] -= path_flow
-            graph.residual[v][u] += path_flow
-            graph.flow[u][v] += path_flow
-            graph.flow[v][u] -= path_flow
-            v = u
+        max_flow += path_flow  # Ajouter le flot du chemin au flot maximum
 
-        max_flow += path_flow
+    return max_flow  # Retourner le flot maximum trouvé
 
-        graph.display_residual()
-        # Afficher le chemin trouvé
-        augmenting_path = []
-        v = sink
-        while v != source:
-            augmenting_path.append(v)
-            v = parent[v]
-        augmenting_path.append(source)
-        augmenting_path.reverse()
-
-        print("Chemin trouvé : ", end="")
-        
-        for i in range(len(augmenting_path)):
-            if i == 0:
-                print(f"s -> ", end="")
-            elif augmenting_path[i] == sink:
-                print("t")
-            else:
-                print(chr(augmenting_path[i]+96), "-> ", end="")
-
-    return max_flow
 
 def push_relabel(graph):
-    n = graph.n
-    source = 0
-    sink = n - 1
+    n = graph.n  # Nombre de sommets dans le graphe
+    source = 0  # Définir la source comme le premier sommet
+    sink = n - 1  # Définir le puits comme le dernier sommet
     
-    height = [0] * n       # Hauteur des sommets
-    excess = [0] * n       # Flot excédentaire aux sommets
-    seen = [0] * n         # Suivi des voisins vus pour la décharge
+    height = [0] * n  # Hauteur des sommets
+    excess = [0] * n  # Flot excédentaire aux sommets
+    seen = [0] * n  # Suivi des voisins vus pour la décharge
     
     # Initialiser le pré-flot
-    height[source] = n
-    for v in range(n):
-        if graph.capacity[source][v] > 0:
-            graph.flow[source][v] = graph.capacity[source][v]
-            graph.flow[v][source] = -graph.flow[source][v]
-            excess[v] = graph.capacity[source][v]
-            excess[source] -= graph.capacity[source][v]
+    height[source] = n  # La hauteur de la source est définie comme le nombre de sommets
+    for v in range(n):  # Parcourir tous les sommets
+        if graph.capacity[source][v] > 0:  # Si la capacité de la source au sommet v est positive
+            graph.flow[source][v] = graph.capacity[source][v]  # Initialiser le flot de la source à v
+            graph.flow[v][source] = -graph.flow[source][v]  # Flot opposé de v à la source
+            excess[v] = graph.capacity[source][v]  # Mettre à jour le flot excédentaire au sommet v
+            excess[source] -= graph.capacity[source][v]  # Réduire le flot excédentaire à la source
     
-    def push(u, v):
-        # Pousser le flot de u à v
-        delta = min(excess[u], graph.capacity[u][v] - graph.flow[u][v])
-        graph.flow[u][v] += delta
-        graph.flow[v][u] -= delta
-        excess[u] -= delta
-        excess[v] += delta
-        print(f"Poussé {delta} de {u} vers {v}")
+    def push(u, v):  # Fonction pour pousser le flot de u à v
+        delta = min(excess[u], graph.capacity[u][v] - graph.flow[u][v])  # Calculer le flot à pousser
+        graph.flow[u][v] += delta  # Mettre à jour le flot de u à v
+        graph.flow[v][u] -= delta  # Mettre à jour le flot opposé de v à u
+        excess[u] -= delta  # Réduire le flot excédentaire à u
+        excess[v] += delta  # Augmenter le flot excédentaire à v
+    
+    def relabel(u):  # Fonction pour relabeler un sommet u
+        min_height = float('Inf')  # Initialiser la hauteur minimale à l'infini
+        for v in range(n):  # Parcourir tous les sommets
+            if graph.capacity[u][v] > graph.flow[u][v]:  # Si la capacité résiduelle est positive
+                min_height = min(min_height, height[v])  # Trouver la hauteur minimale parmi les voisins
+        height[u] = min_height + 1  # Relabeler u avec la nouvelle hauteur
 
-    def relabel(u):
-        # Réétiqueter le sommet u
-        min_height = float('Inf')
-        for v in range(n):
-            if graph.capacity[u][v] > graph.flow[u][v]:
-                min_height = min(min_height, height[v])
-        height[u] = min_height + 1
-        print(f"Réétiquetage de {u} à la hauteur {height[u]}")
-
-    def discharge(u):
-        # Décharger le sommet u
-        while excess[u] > 0:
+    def discharge(u):  # Fonction pour décharger un sommet u
+        while excess[u] > 0:  # Tant qu'il y a un flot excédentaire à u
             if seen[u] < n:  # Vérifier le prochain voisin
-                v = seen[u]
-                if graph.capacity[u][v] > graph.flow[u][v] and height[u] > height[v]:
-                    push(u, v)
+                v = seen[u]  # Obtenir le voisin v
+                if graph.capacity[u][v] > graph.flow[u][v] and height[u] > height[v]:  # Si les conditions de poussée sont remplies
+                    push(u, v)  # Pousser le flot de u à v
                 else:
-                    seen[u] += 1
+                    seen[u] += 1  # Passer au voisin suivant
             else:
-                relabel(u)
-                seen[u] = 0
+                relabel(u)  # Relabeler u si tous les voisins ont été vus
+                seen[u] = 0  # Réinitialiser le compteur de voisins vus
 
     # Ensemble des sommets excluant la source et le puits
     active = [i for i in range(n) if i != source and i != sink]
 
     # Décharger les sommets actifs
-    while any(excess[i] > 0 for i in active):
-        for u in active:
-            if excess[u] > 0:
-                print(f"Décharge de {u} avec {excess[u]}")
-                discharge(u)
+    while any(excess[i] > 0 for i in active):  # Tant qu'il y a des sommets avec un flot excédentaire
+        for u in active:  # Parcourir tous les sommets actifs
+            if excess[u] > 0:  # Si le sommet a un flot excédentaire
+                discharge(u)  # Décharger le sommet
 
     # Retourner le flot maximum, qui est le flot total entrant dans le puits
     return sum(graph.flow[v][sink] for v in range(n))
 
+
 def bellman_ford(residual, cost, source, n):
-    dist = [float('Inf')] * n
-    pred = [-1] * n
-    dist[source] = 0
+    dist = [float('Inf')] * n  # Initialiser les distances à l'infini pour tous les sommets
+    pred = [-1] * n  # Initialiser les prédécesseurs à -1 pour tous les sommets
+    dist[source] = 0  # La distance de la source à elle-même est 0
 
-    for _ in range(n - 1):
-        for u in range(n):
-            for v in range(n):
-                if residual[u][v] > 0 and dist[u] + cost[u][v] < dist[v]:
-                    dist[v] = dist[u] + cost[u][v]
-                    pred[v] = u
+    for _ in range(n - 1):  # Répéter n-1 fois
+        for u in range(n):  # Pour chaque sommet u
+            for v in range(n):  # Pour chaque sommet v
+                if residual[u][v] > 0 and dist[u] + cost[u][v] < dist[v]:  # Si il y a une capacité résiduelle et un chemin plus court
+                    dist[v] = dist[u] + cost[u][v]  # Mettre à jour la distance de v
+                    pred[v] = u  # Mettre à jour le prédécesseur de v
 
-    # Check for negative cycles (optional, not required here)
-    return dist, pred
+    # Vérifier les cycles négatifs (optionnel, non requis ici)
+    return dist, pred  # Retourner les distances et les prédécesseurs
 
 def min_cost_flow(graph, target_flow):
-    n = graph.n
-    source = 0
-    sink = n - 1
-    total_cost = 0
-    flow = 0
+    n = graph.n  # Nombre de sommets dans le graphe
+    source = 0  # Définir la source comme le premier sommet
+    sink = n - 1  # Définir le puits comme le dernier sommet
+    total_cost = 0  # Initialiser le coût total à 0
+    flow = 0  # Initialiser le flot à 0
 
-    while flow < target_flow:
+    while flow < target_flow:  # Tant que le flot total est inférieur au flot cible
         # Trouver les plus courts chemins dans le graphe résiduel
         dist, pred = bellman_ford(graph.residual, graph.cost, source, n)
 
         # Vérifier si un cycle négatif est présent
-        for u in range(n):
-            for v in range(n):
-                if graph.residual[u][v] > 0 and dist[u] + graph.cost[u][v] < dist[v]:
-                    raise ValueError("Cycle négatif détecté dans le graphe.")
+        for u in range(n):  # Pour chaque sommet u
+            for v in range(n):  # Pour chaque sommet v
+                if graph.residual[u][v] > 0 and dist[u] + graph.cost[u][v] < dist[v]:  # Si il y a un cycle négatif
+                    raise ValueError("Cycle négatif détecté dans le graphe.")  # Lever une exception
 
         # Vérifier si un chemin est trouvable
-        if dist[sink] == float('Inf'):
-            print("Aucun chemin disponible pour atteindre le flot cible.")
-            break
+        if dist[sink] == float('Inf'):  # Si la distance au puits est infinie
+            print("Aucun chemin disponible pour atteindre le flot cible.")  # Afficher un message
+            break  # Sortir de la boucle
 
         # Trouver le flot maximum possible à pousser dans ce chemin
-        path_flow = float('Inf')
-        v = sink
-        while v != source:
-            u = pred[v]
-            if u == -1:
-                raise ValueError("Erreur dans les prédécesseurs : chemin invalide.")
-            path_flow = min(path_flow, graph.residual[u][v])
-            v = u
+        path_flow = float('Inf')  # Initialiser le flot du chemin à l'infini
+        v = sink  # Commencer du puits
+        while v != source:  # Remonter le chemin trouvé par Bellman-Ford
+            u = pred[v]  # Trouver le prédécesseur de v
+            if u == -1:  # Si le prédécesseur est invalide
+                raise ValueError("Erreur dans les prédécesseurs : chemin invalide.")  # Lever une exception
+            path_flow = min(path_flow, graph.residual[u][v])  # Trouver la capacité résiduelle minimale le long du chemin
+            v = u  # Passer au sommet précédent
 
         # Limiter le flot pour ne pas dépasser le flot cible restant
-        path_flow = min(path_flow, target_flow - flow)
+        path_flow = min(path_flow, target_flow - flow)  # Limiter le flot
 
         # Pousser le flot le long du chemin augmentant
-        v = sink
-        while v != source:
-            u = pred[v]
+        v = sink  # Recommencer du puits
+        while v != source:  # Remonter le chemin trouvé par Bellman-Ford
+            u = pred[v]  # Trouver le prédécesseur de v
             # Mise à jour du graphe résiduel
-            graph.residual[u][v] -= path_flow
-            graph.residual[v][u] += path_flow
+            graph.residual[u][v] -= path_flow  # Réduire la capacité résiduelle le long du chemin
+            graph.residual[v][u] += path_flow  # Augmenter la capacité résiduelle dans la direction opposée
 
             # Mise à jour de la matrice de flot
-            graph.flow[u][v] += path_flow
-            graph.flow[v][u] -= path_flow
+            graph.flow[u][v] += path_flow  # Augmenter le flot le long du chemin
+            graph.flow[v][u] -= path_flow  # Réduire le flot dans la direction opposée
 
             # Mise à jour du coût total
-            total_cost += path_flow * graph.cost[u][v]
-            v = u
+            total_cost += path_flow * graph.cost[u][v]  # Ajouter le coût du chemin au coût total
+            v = u  # Passer au sommet précédent
 
         # Mettre à jour le flot total
-        flow += path_flow
-        print(f"Flot ajouté : {path_flow}, Flot total : {flow}, Coût total : {total_cost}")
+        flow += path_flow  # Ajouter le flot du chemin au flot total
+        print(f"Flot ajouté : {path_flow}, Flot total : {flow}, Coût total : {total_cost}")  # Afficher les informations du flot
 
     # Vérifier si le flot cible a été atteint
-    if flow < target_flow:
-        print("Impossible d'atteindre le flot cible avec les capacités actuelles.")
-        return None
+    if flow < target_flow:  # Si le flot total est inférieur au flot cible
+        print("Impossible d'atteindre le flot cible avec les capacités actuelles.")  # Afficher un message
+        return None  # Retourner None
 
-    return total_cost
+    return total_cost  # Retourner le coût total
